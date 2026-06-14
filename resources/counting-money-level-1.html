@@ -2,6 +2,25 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<!-- Google Consent Mode defaults — must be set before gtag.js loads -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-89LMQSQYGT"></script>
+<script>
+  gtag('js', new Date());
+  gtag('config', 'G-89LMQSQYGT');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6956947027653253"
+     crossorigin="anonymous"></script>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Counting Money - Level 1 Worksheet | Down the Hall Resources</title>
 <meta name="description" content="Free printable Counting Money - Level 1 worksheet for functional math practice. Designed for supported learning at home, school, or community programs.">
@@ -35,6 +54,51 @@ li{margin:8px 0}.related-grid,.category-grid{display:grid;grid-template-columns:
 </style>
 </head>
 <body>
+<!-- COOKIE CONSENT BANNER -->
+<div id="cookie-consent-banner" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:9999;background:#3d2e1e;color:#f5f0e8;padding:1rem 1.5rem;flex-wrap:wrap;align-items:center;justify-content:center;gap:1rem;font-family:Arial,sans-serif;box-shadow:0 -2px 16px rgba(0,0,0,0.18);">
+  <p style="margin:0;flex:1;min-width:240px;max-width:640px;font-size:0.85rem;line-height:1.6;color:rgba(245,240,232,0.85);">
+    We use cookies for basic analytics and to show ads that help keep this site free. You can accept or decline — see our <a href="../legal.html#privacy" style="color:#c4773a;">Privacy Policy</a> for details.
+  </p>
+  <div style="display:flex;gap:0.6rem;flex-shrink:0;">
+    <button id="cookie-decline-btn" style="background:transparent;border:1px solid rgba(245,240,232,0.35);color:#f5f0e8;padding:9px 18px;border-radius:6px;cursor:pointer;font-size:0.82rem;font-family:inherit;">Decline</button>
+    <button id="cookie-accept-btn" style="background:#c4773a;border:none;color:#fff;padding:9px 20px;border-radius:6px;cursor:pointer;font-size:0.82rem;font-weight:500;font-family:inherit;">Accept</button>
+  </div>
+</div>
+<script>
+(function() {
+  var KEY = 'dthr_cookie_consent';
+  var saved = localStorage.getItem(KEY);
+  var banner = document.getElementById('cookie-consent-banner');
+
+  function applyConsent(granted) {
+    gtag('consent', 'update', {
+      'ad_storage': granted ? 'granted' : 'denied',
+      'ad_user_data': granted ? 'granted' : 'denied',
+      'ad_personalization': granted ? 'granted' : 'denied',
+      'analytics_storage': granted ? 'granted' : 'denied'
+    });
+  }
+
+  if (saved === 'granted' || saved === 'denied') {
+    applyConsent(saved === 'granted');
+  } else if (banner) {
+    banner.style.display = 'flex';
+  }
+
+  var acceptBtn = document.getElementById('cookie-accept-btn');
+  var declineBtn = document.getElementById('cookie-decline-btn');
+  if (acceptBtn) acceptBtn.addEventListener('click', function() {
+    localStorage.setItem(KEY, 'granted');
+    applyConsent(true);
+    banner.style.display = 'none';
+  });
+  if (declineBtn) declineBtn.addEventListener('click', function() {
+    localStorage.setItem(KEY, 'denied');
+    applyConsent(false);
+    banner.style.display = 'none';
+  });
+})();
+</script>
 
 <header class="site-header">
   <nav class="nav" aria-label="Main navigation">
@@ -79,6 +143,12 @@ li{margin:8px 0}.related-grid,.category-grid{display:grid;grid-template-columns:
       <li>Practice completing a structured activity with the right level of support.</li>
       <li>Help the learner find totals and use money skills in everyday settings.</li>
     </ul>
+
+    <div class="ad-slot" style="margin:34px 0;text-align:center;">
+  <div style="font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);opacity:0.6;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6956947027653253" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
 
     <h2>How to use it</h2>
     <ol>
