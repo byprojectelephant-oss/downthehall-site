@@ -1,0 +1,523 @@
+import fs from "node:fs";
+import path from "node:path";
+
+const root = process.cwd();
+const siteUrl = "https://downthehallresources.com";
+const today = "2026-06-14";
+const sourcePath = path.join(root, "index.html");
+const outputDir = path.join(root, "resources");
+
+const escapeHtml = (value = "") =>
+  value
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;");
+
+const stripHtml = (value = "") =>
+  value.replace(/<[^>]+>/g, "").replaceAll("&amp;", "&").replaceAll("&mdash;", "-").trim();
+
+const slugify = (value) =>
+  value
+    .normalize("NFKD")
+    .replace(/[^\w\s-]/g, "")
+    .trim()
+    .toLowerCase()
+    .replace(/[\s_]+/g, "-")
+    .replace(/-+/g, "-");
+
+const categories = {
+  "life-skills": {
+    name: "Life Skills",
+    slug: "life-skills-worksheets",
+    title: "Free Life Skills Worksheets for Teens and Adults",
+    description:
+      "Free printable life skills worksheets covering home safety, personal care, healthy eating, food labels, and everyday independence.",
+    intro:
+      "Build practical independence with printable activities designed for direct instruction, small groups, and supported practice. These resources use clear language and concrete situations that work well in special education, day programs, group homes, and community settings.",
+  },
+  reading: {
+    name: "Reading & Language",
+    slug: "reading-language-worksheets",
+    title: "Free Reading and Language Worksheets",
+    description:
+      "Free printable tracing, vocabulary, word search, and language worksheets for learners who benefit from accessible practice.",
+    intro:
+      "Support functional literacy, handwriting, vocabulary, and word recognition with accessible printable activities. The collection includes beginner tracing practice and health-themed language activities for individual or group instruction.",
+  },
+  math: {
+    name: "Math & Numbers",
+    slug: "math-number-worksheets",
+    title: "Free Printable Math and Number Worksheets",
+    description:
+      "Free counting, money, addition, and subtraction worksheets with accessible levels and printable answer-key options.",
+    intro:
+      "Practice useful number skills through counting, money recognition, addition, and subtraction. Multiple levels make it easier to choose a starting point and build confidence without changing the overall activity format.",
+  },
+  "social-emotional": {
+    name: "Social & Emotional",
+    slug: "social-emotional-worksheets",
+    title: "Free Social and Emotional Skills Worksheets",
+    description:
+      "Free printable worksheets for emotions, calming strategies, friendship, self-advocacy, social situations, and emotional safety.",
+    intro:
+      "Use concrete scenarios and guided choices to teach emotional awareness, communication, self-advocacy, friendship, and coping skills. These printables can support discussion, role-play, and individualized learning goals.",
+  },
+  coloring: {
+    name: "Creative Arts",
+    slug: "coloring-pages",
+    title: "Free Printable Coloring Pages",
+    description:
+      "Free printable animal and community-safety coloring pages for relaxing, accessible creative activities.",
+    intro:
+      "Offer a low-pressure creative activity that supports choice-making, fine-motor practice, attention, and conversation. These free coloring pages are ready to print for classrooms, programs, and home use.",
+  },
+};
+
+const subtopicFor = (resource) => {
+  if (resource.href.includes("/home-safety/")) return "Home Safety";
+  if (resource.href.includes("/personal-care/")) return "Personal Care";
+  if (resource.href.includes("/reading-food-labels/")) return "Reading Food Labels";
+  if (resource.href.includes("/healthy-eating/")) return "Healthy Eating";
+  if (resource.href.includes("/tracing-practice/")) return "Tracing Practice";
+  if (resource.href.includes("/health-wellness-word-puzzles/")) return "Health and Wellness Vocabulary";
+  if (resource.filter === "math") return "Functional Math";
+  if (resource.filter === "social-emotional") return "Social and Emotional Learning";
+  if (resource.filter === "coloring") return "Creative Arts";
+  return "Life Skills";
+};
+
+const levelFor = (resource) => {
+  const levelMatch = resource.title.match(/Level\s+(\d)/i);
+  if (levelMatch) return `Level ${levelMatch[1]}`;
+  if (resource.tags.some((tag) => /beginner/i.test(tag))) return "Beginner";
+  if (resource.tags.some((tag) => /intermediate/i.test(tag))) return "Intermediate";
+  if (resource.tags.some((tag) => /advanced/i.test(tag))) return "Advanced";
+  return "Flexible level";
+};
+
+const contentFor = (resource) => {
+  const subtopic = subtopicFor(resource);
+  const title = resource.title.replaceAll("—", "-");
+  const lower = title.toLowerCase();
+  let skill = "practice an everyday skill through clear, structured prompts";
+  let action = "review the directions together, model one example, and let the learner complete the remaining items";
+  let outcome = "explain the skill and apply it with greater confidence";
+
+  if (subtopic === "Home Safety") {
+    skill = "recognize safer choices and respond to common situations at home";
+    action = "discuss each situation, invite the learner to choose a response, and rehearse the safest action";
+    outcome = "identify a safe response and know when to ask a trusted person for help";
+  } else if (subtopic === "Personal Care") {
+    skill = "learn a practical self-care routine using concrete, easy-to-follow steps";
+    action = "preview the sequence, connect each step to the learner's own routine, and practice with real supplies when appropriate";
+    outcome = "complete or describe more of the routine independently";
+  } else if (subtopic === "Reading Food Labels") {
+    skill = "find and interpret useful information on a nutrition label";
+    action = "look at one label together, locate the key numbers, and compare answers using real food packages when available";
+    outcome = "use label information to answer practical questions and compare foods";
+  } else if (subtopic === "Healthy Eating") {
+    skill = "sort, compare, and discuss foods using practical nutrition concepts";
+    action = "name the foods together, think aloud through one example, and connect the activity to familiar meals";
+    outcome = "make and explain a balanced food choice";
+  } else if (subtopic === "Tracing Practice") {
+    skill = "build letter or number formation, pencil control, and visual tracking";
+    action = "demonstrate the starting point and direction, encourage a comfortable grip, and use short practice sessions";
+    outcome = "form the featured letters or numbers with improved control";
+  } else if (subtopic === "Health and Wellness Vocabulary") {
+    skill = "strengthen health vocabulary, spelling, and word recognition";
+    action = "read the word bank aloud, define unfamiliar terms, and complete a few clues together before independent work";
+    outcome = "recognize and use common health and wellness words";
+  } else if (resource.filter === "math") {
+    skill = lower.includes("money")
+      ? "count coins and bills in practical money situations"
+      : lower.includes("count")
+        ? "practice one-to-one counting and connect quantities to written numbers"
+        : "build accuracy and confidence with basic number operations";
+    action = "solve one example aloud, allow scratch work or manipulatives, and focus on accuracy before speed";
+    outcome = lower.includes("money")
+      ? "find totals and use money skills in everyday settings"
+      : "solve the featured number problems with a strategy that makes sense";
+  } else if (resource.filter === "social-emotional") {
+    skill = "identify feelings, communication choices, and helpful responses in everyday social situations";
+    action = "read each prompt aloud, ask what the learner notices, and role-play more than one possible response";
+    outcome = "name a feeling or need and choose a respectful, safe response";
+  } else if (resource.filter === "coloring") {
+    skill = "practice fine-motor control, sustained attention, and creative choice-making";
+    action = "offer a small selection of materials, invite conversation about the picture, and let the learner choose colors freely";
+    outcome = "complete a relaxing creative activity while practicing hand control and attention";
+  }
+
+  return { subtopic, skill, action, outcome };
+};
+
+const parseResources = (html) => {
+  const anchorPattern = /<a\s+([^>]*class="[^"]*resource-card[^"]*"[^>]*)>([\s\S]*?)<\/a>/g;
+  const resources = [];
+  let match;
+
+  while ((match = anchorPattern.exec(html))) {
+    const [full, attrs, body] = match;
+    const visibleHref = attrs.match(/href="([^"]+)"/)?.[1];
+    const title = body.match(/class="res-title">([^<]+)/)?.[1];
+    if (!visibleHref || !title) continue;
+
+    let href = attrs.match(/data-pdf="([^"]+)"/)?.[1];
+    if (!href && visibleHref.endsWith(".pdf")) href = visibleHref;
+    if (!href && visibleHref.startsWith("resources/")) {
+      const landingPath = path.join(root, visibleHref);
+      if (fs.existsSync(landingPath)) {
+        const landingHtml = fs.readFileSync(landingPath, "utf8");
+        href = landingHtml.match(/class="button primary" href="\.\.\/([^"]+\.pdf)"/)?.[1];
+      }
+    }
+    if (!href) continue;
+
+    const filter = attrs.match(/data-filter="([^"]+)"/)?.[1] || "life-skills";
+    const thumb = body.match(/<img src="([^"]+)"/)?.[1];
+    let variant = attrs.match(/data-worksheet-only="([^"]+)"/)?.[1];
+    if (!variant && visibleHref.startsWith("resources/")) {
+      const landingPath = path.join(root, visibleHref);
+      if (fs.existsSync(landingPath)) {
+        const landingHtml = fs.readFileSync(landingPath, "utf8");
+        variant = landingHtml.match(/class="button secondary" href="\.\.\/([^"]+\.pdf)"/)?.[1];
+      }
+    }
+    const tags = [...body.matchAll(/<span class="tag">([^<]+)<\/span>/g)].map((item) =>
+      stripHtml(item[1]),
+    );
+
+    resources.push({
+      full,
+      attrs,
+      body,
+      href,
+      title: stripHtml(title),
+      filter,
+      thumb,
+      variant,
+      tags,
+    });
+  }
+
+  return [...new Map(resources.map((resource) => [resource.href, resource])).values()];
+};
+
+const styles = `
+:root{--walnut:#3d2e1e;--terracotta:#c4773a;--linen:#f5f0e8;--sage:#5c8c6a;--white:#fff;--muted:#74675b;--border:#e2d9cd}
+*{box-sizing:border-box}body{margin:0;background:var(--linen);color:var(--walnut);font-family:Arial,sans-serif;line-height:1.65}
+a{color:inherit}.site-header{background:var(--walnut);color:var(--linen)}.nav{max-width:1120px;margin:auto;padding:16px 24px;display:flex;justify-content:space-between;gap:24px;align-items:center}
+.brand{display:flex;align-items:center;text-decoration:none}.brand img{width:190px;height:46px;object-fit:contain;background:#fff;border-radius:6px;padding:3px 7px}.nav-links{display:flex;gap:18px;flex-wrap:wrap}.nav-links a{color:var(--linen);font-size:14px;text-decoration:none}
+.wrap{max-width:1060px;margin:auto;padding:34px 24px 70px}.crumbs{font-size:14px;color:var(--muted);margin-bottom:24px}.crumbs a{color:var(--terracotta)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,390px);gap:48px;align-items:start}.eyebrow{text-transform:uppercase;letter-spacing:.1em;font-size:12px;font-weight:700;color:var(--terracotta)}
+h1,h2{font-family:Georgia,serif;line-height:1.2}h1{font-size:clamp(34px,5vw,54px);margin:12px 0 18px}h2{font-size:26px;margin:40px 0 12px}
+.lead{font-size:19px;color:#56483d}.tags{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0}.tag{background:#fff;border:1px solid var(--border);padding:5px 10px;border-radius:20px;font-size:13px}
+.preview{background:#fff;padding:14px;border-radius:14px;box-shadow:0 10px 30px rgba(61,46,30,.12)}.preview img{width:100%;display:block;border-radius:8px}.preview-note{font-size:13px;color:var(--muted);margin:10px 4px 0}
+.button-row{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0}.button{display:inline-block;padding:12px 19px;border-radius:7px;text-decoration:none;font-weight:700}.primary{background:var(--terracotta);color:#fff}.secondary{background:var(--sage);color:#fff}
+.content{max-width:760px}.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:34px 0}.info{background:#fff;border:1px solid var(--border);border-radius:10px;padding:18px}.info strong{display:block;margin-bottom:4px}
+li{margin:8px 0}.related-grid,.category-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden;text-decoration:none}.card img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:top}.card-body{padding:15px}.card small{color:var(--terracotta);font-weight:700}.card h3{font:700 18px/1.3 Georgia,serif;margin:5px 0}
+.category-hero{max-width:760px;margin-bottom:36px}.category-hero p{font-size:18px}.site-footer{background:var(--walnut);color:var(--linen)}.site-footer-inner{max-width:1120px;margin:auto;padding:36px 32px 20px;display:grid;grid-template-columns:minmax(220px,1.35fr) 1fr 1fr;gap:32px}.site-footer-logo{display:inline-flex}.site-footer-logo img{width:190px;height:46px;object-fit:contain;background:#fff;border-radius:6px;padding:3px 7px}.site-footer-tagline{max-width:310px;margin-top:12px;color:rgba(245,240,232,.68);font-size:13px;line-height:1.6}.site-footer h2{margin:0 0 11px;color:var(--linen);font:700 12px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase}.site-footer-links{display:grid;gap:8px}.site-footer-links a{color:rgba(245,240,232,.72);text-decoration:none;font-size:13px}.site-footer-links a:hover{color:var(--linen)}.site-footer-bottom{max-width:1120px;margin:auto;padding:16px 32px 22px;border-top:1px solid rgba(245,240,232,.12);color:rgba(245,240,232,.48);font-size:12px}
+@media(max-width:760px){.hero-grid{grid-template-columns:1fr}.info-grid,.related-grid,.category-grid{grid-template-columns:1fr 1fr}.nav{align-items:flex-start;flex-direction:column}.hero-grid{gap:28px}.site-footer-inner{grid-template-columns:1fr;padding:32px 20px 20px;gap:24px}.site-footer-bottom{padding:16px 20px 20px}}
+@media(max-width:480px){.info-grid,.related-grid,.category-grid{grid-template-columns:1fr}.wrap{padding-left:18px;padding-right:18px}}
+`;
+
+const header = `
+<header class="site-header">
+  <nav class="nav" aria-label="Main navigation">
+    <a class="brand" href="../index.html"><img src="../logo-header.png" alt="Down the Hall Resources"></a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="life-skills-worksheets.html">Life Skills</a>
+      <a href="math-number-worksheets.html">Math</a>
+      <a href="reading-language-worksheets.html">Reading</a>
+      <a href="../generator.html">Worksheet Generator</a>
+    </div>
+  </nav>
+</header>`;
+
+const footer = `<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div>
+      <a class="site-footer-logo" href="../index.html"><img src="../logo-header.png" alt="Down the Hall Resources"></a>
+      <p class="site-footer-tagline">Free, practical worksheets supporting learning, everyday skills, and greater independence.</p>
+    </div>
+    <div>
+      <h2>Explore</h2>
+      <div class="site-footer-links">
+        <a href="life-skills-worksheets.html">Life Skills Worksheets</a>
+        <a href="math-number-worksheets.html">Math &amp; Number Worksheets</a>
+        <a href="reading-language-worksheets.html">Reading &amp; Language</a>
+        <a href="social-emotional-worksheets.html">Social &amp; Emotional Skills</a>
+        <a href="coloring-pages.html">Coloring Pages</a>
+      </div>
+    </div>
+    <div>
+      <h2>Tools &amp; Information</h2>
+      <div class="site-footer-links">
+        <a href="../generator.html">Worksheet Generator</a>
+        <a href="../math-generator.html">Math Worksheet Generator</a>
+        <a href="mailto:hello@downthehallresources.com">Contact Us</a>
+        <a href="../legal.html">Terms &amp; Privacy</a>
+      </div>
+    </div>
+  </div>
+  <div class="site-footer-bottom">&copy; 2026 Down the Hall Resources. Free to print and use according to our terms.</div>
+</footer>`;
+
+const resourceCard = (resource) => `
+<a class="card" href="${resource.slug}.html">
+  ${resource.thumb ? `<img src="../${escapeHtml(resource.thumb)}" alt="${escapeHtml(resource.title)} worksheet preview" loading="lazy">` : ""}
+  <div class="card-body">
+    <small>${escapeHtml(subtopicFor(resource))}</small>
+    <h3>${escapeHtml(resource.title)}</h3>
+    <span>View worksheet details</span>
+  </div>
+</a>`;
+
+const resourcePage = (resource, allResources) => {
+  const category = categories[resource.filter];
+  const details = contentFor(resource);
+  const canonical = `${siteUrl}/resources/${resource.slug}.html`;
+  const description = `Free printable ${resource.title} worksheet for ${details.subtopic.toLowerCase()} practice. Designed for supported learning at home, school, or community programs.`;
+  const related = allResources
+    .filter((item) => item.href !== resource.href && item.filter === resource.filter)
+    .sort((a, b) => {
+      const aSame = subtopicFor(a) === details.subtopic ? 0 : 1;
+      const bSame = subtopicFor(b) === details.subtopic ? 0 : 1;
+      return aSame - bSame;
+    })
+    .slice(0, 3);
+  const tags = [details.subtopic, levelFor(resource), ...resource.tags]
+    .filter(
+      (tag, index, items) =>
+        items.findIndex((item) => item.toLowerCase() === tag.toLowerCase()) === index,
+    )
+    .slice(0, 5);
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    name: resource.title,
+    description,
+    url: canonical,
+    image: resource.thumb ? `${siteUrl}/${resource.thumb}` : undefined,
+    learningResourceType: "Worksheet",
+    educationalUse: "Practice",
+    isAccessibleForFree: true,
+    inLanguage: "en-US",
+    provider: {
+      "@type": "Organization",
+      name: "Down the Hall Resources",
+      url: `${siteUrl}/`,
+    },
+  };
+
+  return `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>${escapeHtml(resource.title)} Worksheet | Down the Hall Resources</title>
+<meta name="description" content="${escapeHtml(description)}">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="${canonical}">
+<link rel="icon" type="image/png" href="../logo-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Down the Hall Resources">
+<meta property="og:title" content="${escapeHtml(resource.title)} Free Printable Worksheet">
+<meta property="og:description" content="${escapeHtml(description)}">
+<meta property="og:url" content="${canonical}">
+${resource.thumb ? `<meta property="og:image" content="${siteUrl}/${escapeHtml(resource.thumb)}">` : ""}
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">${JSON.stringify(schema)}</script>
+<style>${styles}</style>
+</head>
+<body>
+${header}
+<main class="wrap">
+  <div class="crumbs"><a href="../index.html">Home</a> / <a href="${category.slug}.html">${escapeHtml(category.name)}</a> / ${escapeHtml(resource.title)}</div>
+  <div class="hero-grid">
+    <article>
+      <div class="eyebrow">Free printable ${escapeHtml(details.subtopic)} worksheet</div>
+      <h1>${escapeHtml(resource.title)}</h1>
+      <p class="lead">This accessible activity gives learners a clear way to ${escapeHtml(details.skill)}.</p>
+      <div class="tags">${tags.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("")}</div>
+      <div class="button-row">
+        <a class="button primary" href="../${escapeHtml(resource.href)}" download>Download free PDF</a>
+        ${resource.variant ? `<a class="button secondary" href="../${escapeHtml(resource.variant)}" download>Worksheet only</a>` : ""}
+      </div>
+      <p>No account is required. Print the PDF on standard letter-size paper and use it for individual instruction, small groups, classroom practice, or home learning.</p>
+    </article>
+    ${resource.thumb ? `<aside class="preview"><img src="../${escapeHtml(resource.thumb)}" alt="Preview of the ${escapeHtml(resource.title)} printable worksheet"><p class="preview-note">Preview of the printable resource. Download the PDF for the full-size version${resource.variant ? " or choose the worksheet-only edition" : ""}.</p></aside>` : ""}
+  </div>
+
+  <div class="content">
+    <div class="info-grid">
+      <div class="info"><strong>Topic</strong>${escapeHtml(details.subtopic)}</div>
+      <div class="info"><strong>Difficulty</strong>${escapeHtml(levelFor(resource))}</div>
+      <div class="info"><strong>Format</strong>Printable PDF</div>
+    </div>
+
+    <h2>What this worksheet teaches</h2>
+    <p>${escapeHtml(resource.title)} gives learners a focused way to ${escapeHtml(details.skill)}. The activity is designed to make the topic easier to discuss, demonstrate, and revisit without requiring special materials.</p>
+    <ul>
+      <li>Build familiarity with ${escapeHtml(details.subtopic.toLowerCase())} vocabulary and choices.</li>
+      <li>Practice completing a structured activity with the right level of support.</li>
+      <li>Help the learner ${escapeHtml(details.outcome)}.</li>
+    </ul>
+
+    <h2>How to use it</h2>
+    <ol>
+      <li>Choose the full PDF${resource.variant ? " with its answer key or the worksheet-only version" : ""}, then print one copy per learner.</li>
+      <li>${escapeHtml(details.action[0].toUpperCase() + details.action.slice(1))}.</li>
+      <li>Review the completed page together and connect the answers to a real routine, object, or situation whenever possible.</li>
+    </ol>
+
+    <h2>Who it is for</h2>
+    <p>This resource can be adapted for teens and adults with intellectual or developmental disabilities, special education students, transition programs, adult day services, group homes, community centers, and families practicing functional skills. Support can include reading prompts aloud, offering choices, using visual examples, or completing fewer items at one time.</p>
+  </div>
+
+  <h2>Related free worksheets</h2>
+  <div class="related-grid">${related.map(resourceCard).join("")}</div>
+</main>
+${footer}
+</body>
+</html>`;
+};
+
+const categoryPage = (key, resources) => {
+  const category = categories[key];
+  const canonical = `${siteUrl}/resources/${category.slug}.html`;
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: category.title,
+    description: category.description,
+    url: canonical,
+    isPartOf: { "@type": "WebSite", name: "Down the Hall Resources", url: `${siteUrl}/` },
+  };
+
+  return `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>${escapeHtml(category.title)} | Down the Hall Resources</title>
+<meta name="description" content="${escapeHtml(category.description)}">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="${canonical}">
+<link rel="icon" type="image/png" href="../logo-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Down the Hall Resources">
+<meta property="og:title" content="${escapeHtml(category.title)}">
+<meta property="og:description" content="${escapeHtml(category.description)}">
+<meta property="og:url" content="${canonical}">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">${JSON.stringify(schema)}</script>
+<style>${styles}</style>
+</head>
+<body>
+${header}
+<main class="wrap">
+  <div class="crumbs"><a href="../index.html">Home</a> / ${escapeHtml(category.name)}</div>
+  <section class="category-hero">
+    <div class="eyebrow">Free printable resource collection</div>
+    <h1>${escapeHtml(category.title)}</h1>
+    <p>${escapeHtml(category.intro)}</p>
+    <p>Every resource is free to download, requires no account, and includes a printable activity designed for flexible support.</p>
+  </section>
+  <div class="category-grid">${resources.map(resourceCard).join("")}</div>
+</main>
+${footer}
+</body>
+</html>`;
+};
+
+let indexHtml = fs.readFileSync(sourcePath, "utf8");
+const resources = parseResources(indexHtml).map((resource) => ({
+  ...resource,
+  slug: slugify(path.basename(resource.href, ".pdf")),
+}));
+
+fs.mkdirSync(outputDir, { recursive: true });
+
+for (const resource of resources) {
+  fs.writeFileSync(
+    path.join(outputDir, `${resource.slug}.html`),
+    resourcePage(resource, resources),
+    "utf8",
+  );
+}
+
+for (const key of Object.keys(categories)) {
+  const categoryResources = resources.filter((resource) => resource.filter === key);
+  fs.writeFileSync(
+    path.join(outputDir, `${categories[key].slug}.html`),
+    categoryPage(key, categoryResources),
+    "utf8",
+  );
+}
+
+for (const resource of resources) {
+  const escapedHref = resource.href.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const currentLanding = `resources/${resource.slug}.html`;
+  const linkTarget = indexHtml.includes(`href="${resource.href}"`) ? escapedHref : currentLanding;
+  const anchorPattern = new RegExp(
+    `(<a\\s+[^>]*?)href="${linkTarget.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}"([^>]*class="[^"]*resource-card[^"]*"[^>]*>)`,
+    "g",
+  );
+  indexHtml = indexHtml.replace(anchorPattern, (full, before, after) => {
+    const cleaned = `${before}href="${currentLanding}" data-pdf="${resource.href}"${after}`
+      .replace(/\sdownload(?=[\s>])/g, "")
+      .replace(/\sdata-pdf="[^"]+"/g, "")
+      .replace(/\sdata-worksheet-only="[^"]+"/g, "");
+    return cleaned.replace(`href="${currentLanding}"`, `href="${currentLanding}" data-pdf="${resource.href}"`);
+  });
+}
+
+const categoryLinks = `
+    <div class="section-header" style="margin-top:0.5rem;">
+      <div class="section-label">Explore worksheet collections</div>
+    </div>
+    <div class="cat-grid" style="margin-bottom:2rem;">
+      ${Object.values(categories)
+        .map(
+          (category) => `<a class="cat-card" href="resources/${category.slug}.html" style="text-decoration:none;color:inherit;">
+        <div class="cat-name">${escapeHtml(category.name)}</div>
+        <div class="cat-count">Browse free worksheets</div>
+      </a>`,
+        )
+        .join("\n")}
+    </div>
+`;
+
+if (!indexHtml.includes("Explore worksheet collections")) {
+  indexHtml = indexHtml.replace(
+    '<div class="main" id="resources-main">',
+    `<div class="main" id="resources-main">\n${categoryLinks}`,
+  );
+}
+
+fs.writeFileSync(sourcePath, indexHtml, "utf8");
+
+const staticUrls = ["/", "/generator.html", "/math-generator.html", "/legal.html"];
+const generatedUrls = [
+  ...Object.values(categories).map((category) => `/resources/${category.slug}.html`),
+  ...resources.map((resource) => `/resources/${resource.slug}.html`),
+];
+const sitemapEntries = [...staticUrls, ...generatedUrls]
+  .map(
+    (url) => `  <url>
+    <loc>${siteUrl}${url}</loc>
+    <lastmod>${today}</lastmod>
+  </url>`,
+  )
+  .join("\n\n");
+
+fs.writeFileSync(
+  path.join(root, "sitemap.xml"),
+  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapEntries}\n</urlset>\n`,
+  "utf8",
+);
+
+console.log(`Generated ${resources.length} worksheet pages and ${Object.keys(categories).length} category pages.`);

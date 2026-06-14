@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- Google Consent Mode defaults — must be set before gtag.js loads -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-89LMQSQYGT"></script>
+<script>
+  gtag('js', new Date());
+  gtag('config', 'G-89LMQSQYGT');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6956947027653253"
+     crossorigin="anonymous"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Worksheet Generator — Down the Hall Resources</title>
+<meta name="description" content="Create and print free custom worksheets for matching, sorting, writing, and other learning activities with an easy online worksheet generator.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://downthehallresources.com/generator.html">
+<link rel="icon" type="image/png" href="logo-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Down the Hall Resources">
+<meta property="og:title" content="Free Custom Worksheet Generator">
+<meta property="og:description" content="Build and print a custom learning worksheet online for free.">
+<meta property="og:url" content="https://downthehallresources.com/generator.html">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Custom Worksheet Generator",
+  "url": "https://downthehallresources.com/generator.html",
+  "description": "A free online tool for creating printable custom learning worksheets.",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Any",
+  "isAccessibleForFree": true,
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
+}
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --walnut:     #2C2420;
+  --terracotta: #C4622D;
+  --terra-light:#FDF4EC;
+  --terra-mid:  #E8D5C4;
+  --sage:       #4A7C6F;
+  --sage-light: #EAF2F0;
+  --slate:      #5B8199;
+  --slate-light:#EBF2F7;
+  --linen:      #F5F0E8;
+  --mid:        #6B5E58;
+  --border:     #E8DDD8;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: var(--linen);
+  color: var(--walnut);
+  min-height: 100vh;
+}
+
+/* ── TOP NAV ── */
+.nav {
+  background: var(--walnut);
+  padding: 14px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-brand { display:flex; align-items:center; }
+.nav-brand img { width:185px; height:46px; object-fit:contain; background:#fff; border-radius:6px; padding:3px 7px; }
+.nav-tag {
+  background: var(--terracotta);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+/* ── HERO ── */
+.hero {
+  background: var(--walnut);
+  padding: 36px 32px 48px;
+  text-align: center;
+  color: #fff;
+}
+.hero h1 { font-size: 34px; font-weight: 900; margin-bottom: 8px; }
+.hero h1 span { color: var(--terracotta); }
+.hero p { font-size: 15px; color: #BFB0A8; max-width: 520px; margin: 0 auto; }
+
+/* ── MAIN LAYOUT ── */
+.container {
+  max-width: 1100px;
+  margin: -20px auto 0;
+  padding: 0 24px 60px;
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+/* ── SIDEBAR (controls) ── */
+.sidebar {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 16px rgba(44,36,32,0.10);
+  overflow: hidden;
+  position: sticky;
+  top: 20px;
+}
+
+.sidebar-header {
+  background: var(--terracotta);
+  color: #fff;
+  padding: 16px 20px;
+  font-weight: 800;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.sidebar-body { padding: 20px; }
+
+.field { margin-bottom: 18px; }
+.field label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--mid);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin-bottom: 6px;
+}
+
+.field input, .field select, .field textarea {
+  width: 100%;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  padding: 9px 12px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  color: var(--walnut);
+  background: #fff;
+  transition: border-color 0.15s;
+  appearance: none;
+}
+.field input:focus, .field select:focus, .field textarea:focus {
+  outline: none;
+  border-color: var(--terracotta);
+}
+.field textarea { resize: vertical; min-height: 70px; }
+
+/* Topic grid */
+.topic-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+.topic-btn {
+  border: 2px solid var(--border);
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: 'Nunito', sans-serif;
+}
+.topic-btn:hover { border-color: var(--terracotta); background: var(--terra-light); }
+.topic-btn.active {
+  border-color: var(--terracotta);
+  background: var(--terracotta);
+  color: #fff;
+}
+.topic-btn .t-icon { font-size: 22px; display: block; margin-bottom: 4px; }
+.topic-btn .t-label { font-size: 11px; font-weight: 700; line-height: 1.2; }
+
+.generate-btn {
+  width: 100%;
+  background: var(--terracotta);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 14px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.generate-btn:hover { background: #A84E22; }
+.generate-btn:active { transform: scale(0.98); }
+
+.print-btn {
+  width: 100%;
+  background: var(--sage);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.15s;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.print-btn:hover { background: #3A6459; }
+.print-btn.visible { display: flex; }
+
+.divider { border: none; border-top: 1px solid var(--border); margin: 16px 0; }
+
+/* ── PREVIEW PANEL ── */
+.preview-panel {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 16px rgba(44,36,32,0.10);
+  overflow: hidden;
+  min-height: 500px;
+}
+
+.preview-header {
+  background: var(--linen);
+  border-bottom: 2px solid var(--border);
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.preview-header-title { font-weight: 800; font-size: 14px; color: var(--walnut); }
+.preview-badge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.badge-waiting { background: var(--border); color: var(--mid); }
+.badge-ready   { background: var(--sage-light); color: var(--sage); }
+
+.preview-body {
+  padding: 0;
+  overflow: hidden;
+}
+
+.preview-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 40px;
+  text-align: center;
+  color: var(--mid);
+}
+.preview-placeholder .ph-icon { font-size: 56px; margin-bottom: 16px; opacity: 0.4; }
+.preview-placeholder h3 { font-size: 18px; font-weight: 800; margin-bottom: 8px; opacity: 0.6; }
+.preview-placeholder p  { font-size: 13px; max-width: 300px; line-height: 1.6; opacity: 0.5; }
+
+#worksheetFrame {
+  width: 100%;
+  border: none;
+  display: none;
+  min-height: 900px;
+}
+.site-footer{background:var(--walnut);color:var(--linen);margin-top:20px}.site-footer-inner{max-width:1120px;margin:auto;padding:36px 32px 20px;display:grid;grid-template-columns:minmax(220px,1.35fr) 1fr 1fr;gap:32px}.site-footer-logo{display:inline-flex}.site-footer-logo img{width:190px;height:46px;object-fit:contain;background:#fff;border-radius:6px;padding:3px 7px}.site-footer-tagline{max-width:310px;margin-top:12px;color:rgba(245,240,232,.68);font-size:13px;line-height:1.6}.site-footer h2{margin:0 0 11px;color:var(--linen);font-size:12px;letter-spacing:.08em;text-transform:uppercase}.site-footer-links{display:grid;gap:8px}.site-footer-links a{color:rgba(245,240,232,.72);text-decoration:none;font-size:13px}.site-footer-links a:hover{color:var(--linen)}.site-footer-bottom{max-width:1120px;margin:auto;padding:16px 32px 22px;border-top:1px solid rgba(245,240,232,.12);color:rgba(245,240,232,.48);font-size:12px}@media(max-width:700px){.site-footer-inner{grid-template-columns:1fr;padding:32px 20px 20px;gap:24px}.site-footer-bottom{padding:16px 20px 20px}}
+
+/* ── WORKSHEET STYLES (injected into iframe) ── */
+</style>
+</head>
+<body>
+
+<!-- COOKIE CONSENT BANNER -->
+<div id="cookie-consent-banner" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:9999;background:#2C2420;color:#F5F0E8;padding:1rem 1.5rem;flex-wrap:wrap;align-items:center;justify-content:center;gap:1rem;font-family:'Nunito',sans-serif;box-shadow:0 -2px 16px rgba(0,0,0,0.18);">
+  <p style="margin:0;flex:1;min-width:240px;max-width:640px;font-size:0.85rem;line-height:1.6;color:rgba(245,240,232,0.85);">
+    We use cookies for basic analytics and to show ads that help keep this site free. You can accept or decline — see our <a href="legal.html#privacy" style="color:#C4622D;">Privacy Policy</a> for details.
+  </p>
+  <div style="display:flex;gap:0.6rem;flex-shrink:0;">
+    <button id="cookie-decline-btn" style="background:transparent;border:1px solid rgba(245,240,232,0.35);color:#F5F0E8;padding:9px 18px;border-radius:6px;cursor:pointer;font-size:0.82rem;font-family:inherit;">Decline</button>
+    <button id="cookie-accept-btn" style="background:#C4622D;border:none;color:#fff;padding:9px 20px;border-radius:6px;cursor:pointer;font-size:0.82rem;font-weight:500;font-family:inherit;">Accept</button>
+  </div>
+</div>
+<script>
+(function() {
+  var KEY = 'dthr_cookie_consent';
+  var saved = localStorage.getItem(KEY);
+  var banner = document.getElementById('cookie-consent-banner');
+
+  function applyConsent(granted) {
+    gtag('consent', 'update', {
+      'ad_storage': granted ? 'granted' : 'denied',
+      'ad_user_data': granted ? 'granted' : 'denied',
+      'ad_personalization': granted ? 'granted' : 'denied',
+      'analytics_storage': granted ? 'granted' : 'denied'
+    });
+  }
+
+  if (saved === 'granted' || saved === 'denied') {
+    applyConsent(saved === 'granted');
+  } else if (banner) {
+    banner.style.display = 'flex';
+  }
+
+  var acceptBtn = document.getElementById('cookie-accept-btn');
+  var declineBtn = document.getElementById('cookie-decline-btn');
+  if (acceptBtn) acceptBtn.addEventListener('click', function() {
+    localStorage.setItem(KEY, 'granted');
+    applyConsent(true);
+    banner.style.display = 'none';
+  });
+  if (declineBtn) declineBtn.addEventListener('click', function() {
+    localStorage.setItem(KEY, 'denied');
+    applyConsent(false);
+    banner.style.display = 'none';
+  });
+})();
+</script>
+
+<nav class="nav">
+  <a href="index.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:13px;font-weight:700;display:flex;align-items:center;gap:5px;">← Home</a>
+  <a class="nav-brand" href="index.html"><img src="logo-header.png" alt="Down the Hall Resources"></a>
+  <span class="nav-tag">Worksheet Generator</span>
+</nav>
+
+<div class="hero">
+  <h1>Build a <span>Worksheet</span></h1>
+  <p>Choose a topic, customize the details, and generate a print-ready PDF in seconds.</p>
+</div>
+
+<div class="container">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-header">⚙️ &nbsp;Worksheet Options</div>
+    <div class="sidebar-body">
+
+      <div class="field">
+        <label>Choose a Topic</label>
+      </div>
+      <div class="topic-grid">
+        <button class="topic-btn active" data-topic="daily-schedule">
+          <span class="t-icon">📅</span>
+          <span class="t-label">Daily Schedule</span>
+        </button>
+        <button class="topic-btn" data-topic="hygiene">
+          <span class="t-icon">🪥</span>
+          <span class="t-label">Personal Hygiene</span>
+        </button>
+        <button class="topic-btn" data-topic="emotions">
+          <span class="t-icon">😊</span>
+          <span class="t-label">Emotions & Feelings</span>
+        </button>
+        <button class="topic-btn" data-topic="money">
+          <span class="t-icon">💵</span>
+          <span class="t-label">Money Skills</span>
+        </button>
+        <button class="topic-btn" data-topic="cooking">
+          <span class="t-icon">🍳</span>
+          <span class="t-label">Cooking & Meals</span>
+        </button>
+        <button class="topic-btn" data-topic="safety">
+          <span class="t-icon">🦺</span>
+          <span class="t-label">Community Safety</span>
+        </button>
+        <button class="topic-btn" data-topic="social">
+          <span class="t-icon">🤝</span>
+          <span class="t-label">Social Skills</span>
+        </button>
+        <button class="topic-btn" data-topic="job">
+          <span class="t-icon">💼</span>
+          <span class="t-label">Job & Vocational</span>
+        </button>
+        <button class="topic-btn" data-topic="selfcare">
+          <span class="t-icon">🛁</span>
+          <span class="t-label">Self-Care Checklist</span>
+        </button>
+        <button class="topic-btn" data-topic="grocery">
+          <span class="t-icon">🛒</span>
+          <span class="t-label">Grocery Shopping</span>
+        </button>
+        <button class="topic-btn" data-topic="communication">
+          <span class="t-icon">💬</span>
+          <span class="t-label">Communication</span>
+        </button>
+        <button class="topic-btn" data-topic="goals">
+          <span class="t-icon">🎯</span>
+          <span class="t-label">Goal Tracking</span>
+        </button>
+      </div>
+
+      <hr class="divider">
+
+      <div class="field">
+        <label>Individual's Name (optional)</label>
+        <input type="text" id="fieldName" placeholder="e.g. Alex" />
+      </div>
+
+      <div class="field">
+        <label>Program / Center Name (optional)</label>
+        <input type="text" id="fieldProgram" placeholder="e.g. Sunrise Day Program" />
+      </div>
+
+      <div class="field">
+        <label>Staff / Caregiver (optional)</label>
+        <input type="text" id="fieldStaff" placeholder="e.g. Maria S." />
+      </div>
+
+      <div class="field" id="customField" style="display:none">
+        <label id="customLabel">Custom Items (one per line)</label>
+        <textarea id="fieldCustom" placeholder="Enter items here..."></textarea>
+      </div>
+
+      <hr class="divider">
+
+      <button class="generate-btn" id="generateBtn">
+        ✨ Generate Worksheet
+      </button>
+      <button class="print-btn" id="printBtn">
+        🖨️ Print / Save as PDF
+      </button>
+
+    </div>
+  </aside>
+
+  <!-- PREVIEW -->
+  <div class="preview-panel">
+    <div class="preview-header">
+      <span class="preview-header-title">📄 Preview</span>
+      <span class="preview-badge badge-waiting" id="previewBadge">Pick a topic to start</span>
+    </div>
+    <div class="preview-body">
+      <div class="preview-placeholder" id="placeholder">
+        <div class="ph-icon">📋</div>
+        <h3>Your worksheet will appear here</h3>
+        <p>Choose a topic on the left, add optional details, then hit Generate Worksheet.</p>
+      </div>
+      <iframe id="worksheetFrame" title="Worksheet Preview"></iframe>
+    </div>
+  </div>
+
+  <!-- AD PLACEMENT MOCKUP -->
+  <div style="grid-column:1 / -1;">
+    <div style="font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--mid);opacity:0.55;margin-bottom:6px;text-align:center;">Advertisement</div>
+    <div style="background:white;border:1px dashed var(--border);border-radius:10px;min-height:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:1.1rem;">
+      <div style="font-size:12px;color:var(--mid);line-height:1.6;">
+        <strong style="color:var(--walnut);">[ Ad placement mockup ]</strong><br>
+        A horizontal banner here would sit below the worksheet preview — visible once someone has finished building and is ready to print or download.
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div><a class="site-footer-logo" href="index.html"><img src="logo-header.png" alt="Down the Hall Resources"></a><p class="site-footer-tagline">Free, practical worksheets supporting learning, everyday skills, and greater independence.</p></div>
+    <div><h2>Explore</h2><div class="site-footer-links"><a href="resources/life-skills-worksheets.html">Life Skills Worksheets</a><a href="resources/math-number-worksheets.html">Math &amp; Number Worksheets</a><a href="resources/reading-language-worksheets.html">Reading &amp; Language</a><a href="resources/social-emotional-worksheets.html">Social &amp; Emotional Skills</a><a href="resources/coloring-pages.html">Coloring Pages</a></div></div>
+    <div><h2>Tools &amp; Information</h2><div class="site-footer-links"><a href="generator.html">Worksheet Generator</a><a href="math-generator.html">Math Worksheet Generator</a><a href="mailto:hello@downthehallresources.com">Contact Us</a><a href="legal.html">Terms &amp; Privacy</a></div></div>
+  </div>
+  <div class="site-footer-bottom">&copy; 2026 Down the Hall Resources. Free to print and use according to our terms.</div>
+</footer>
+
+<script>
+let currentTopic = 'daily-schedule';
+
+function selectTopic(btn) {
+  document.querySelectorAll('.topic-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  currentTopic = btn.dataset.topic;
+
+  const customTopics = { cooking: 'Recipe Steps (one per line)', grocery: 'Items to Buy (one per line)', goals: 'Goals (one per line)' };
+  const cf = document.getElementById('customField');
+  const cl = document.getElementById('customLabel');
+  if (customTopics[currentTopic]) {
+    cf.style.display = 'block';
+    cl.textContent = customTopics[currentTopic];
+    document.getElementById('fieldCustom').placeholder = 'Enter items here, one per line...';
+  } else {
+    cf.style.display = 'none';
+  }
+}
+
+function val(id) { return document.getElementById(id).value.trim(); }
+
+function generateWorksheet() {
+  const name    = val('fieldName');
+  const program = val('fieldProgram');
+  const staff   = val('fieldStaff');
+  const custom  = val('fieldCustom');
+
+  const html = buildWorksheet(currentTopic, { name, program, staff, custom });
+
+  const frame = document.getElementById('worksheetFrame');
+  const ph    = document.getElementById('placeholder');
+  const badge = document.getElementById('previewBadge');
+  const printBtn = document.getElementById('printBtn');
+
+  frame.srcdoc = html;
+  frame.style.display = 'block';
+  ph.style.display = 'none';
+  badge.textContent = 'Ready to print';
+  badge.className = 'preview-badge badge-ready';
+  printBtn.classList.add('visible');
+
+  if (typeof gtag === 'function') {
+    gtag('event', 'generate_worksheet', {
+      'event_category': 'Worksheet Generator',
+      'event_label': currentTopic
+    });
+  }
+}
+
+function printWorksheet() {
+  const frame = document.getElementById('worksheetFrame');
+  frame.contentWindow.focus();
+  frame.contentWindow.print();
+
+  if (typeof gtag === 'function') {
+    gtag('event', 'print_worksheet', {
+      'event_category': 'Worksheet Generator',
+      'event_label': currentTopic
+    });
+  }
+}
+
+/* ══════════════════════════════════════════════
+   SHARED STYLES (injected into every worksheet)
+══════════════════════════════════════════════ */
+function baseStyles() {
+  return `
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{width:8.5in;height:11in;background:#fff;font-family:'Nunito',Arial,sans-serif;color:#2C2420;}
+  .page{width:8.5in;height:11in;padding:0.45in 0.5in;display:flex;flex-direction:column;}
+  @page{size:letter portrait;margin:0;}
+  @media print{html,body{width:8.5in;height:11in;} .page{page-break-after:always;} body{-webkit-print-color-adjust:exact;print-color-adjust:exact;}}
+  /* header */
+  .ws-header{display:flex;align-items:center;justify-content:space-between;border-bottom:3px solid #C4622D;padding-bottom:10px;margin-bottom:14px;flex-shrink:0;}
+  .ws-brand{font-size:9.5px;font-weight:700;color:#C4622D;letter-spacing:.08em;text-transform:uppercase;}
+  .ws-title{font-size:24px;font-weight:900;color:#2C2420;line-height:1.1;}
+  .ws-sub{font-size:11px;color:#6B5E58;margin-top:1px;font-weight:600;}
+  .ws-icon{width:48px;height:48px;background:#FDF4EC;border:2px solid #E8D5C4;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;}
+  /* info bar */
+  .info-bar{display:flex;gap:16px;margin-bottom:12px;flex-shrink:0;}
+  .info-field{flex:1;border-bottom:1.5px solid #D4C5BC;padding-bottom:3px;}
+  .info-field label{font-size:9px;font-weight:700;color:#6B5E58;text-transform:uppercase;letter-spacing:.07em;display:block;margin-bottom:1px;}
+  .info-val{font-size:12px;font-weight:700;color:#2C2420;min-height:18px;}
+  /* instructions */
+  .instructions{background:#FDF4EC;border-left:4px solid #C4622D;padding:7px 12px;font-size:11px;color:#3D2B1F;margin-bottom:12px;border-radius:0 6px 6px 0;font-weight:600;flex-shrink:0;}
+  /* section label */
+  .section-label{font-size:9.5px;font-weight:700;color:#9E8E86;text-transform:uppercase;letter-spacing:.07em;background:#F5F0EC;border-bottom:1px solid #E8DDD8;padding:4px 10px;border-top:1px solid #E8DDD8;}
+  /* table */
+  .ws-table{width:100%;border-collapse:collapse;margin-bottom:12px;}
+  .ws-table thead tr{background:#C4622D;color:#fff;}
+  .ws-table thead th{padding:7px 10px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;text-align:left;}
+  .ws-table thead th:first-child{border-radius:6px 0 0 0;}
+  .ws-table thead th:last-child{border-radius:0 6px 0 0;}
+  .ws-table tbody tr:nth-child(even){background:#FAF6F3;}
+  .ws-table tbody tr:nth-child(odd){background:#fff;}
+  .ws-table tbody td{border-bottom:1px solid #E8DDD8;padding:0;vertical-align:middle;}
+  .td-pad{padding:5px 10px;}
+  .write-line{display:block;border-bottom:1px solid #D4C5BC;height:24px;margin:4px 6px;}
+  .check-box{width:20px;height:20px;border:2px solid #C4622D;border-radius:4px;display:inline-block;margin:4px 6px;}
+  .circle-box{width:20px;height:20px;border:2px solid #C4622D;border-radius:50%;display:inline-block;margin:4px 6px;}
+  /* bottom boxes */
+  .bottom-row{display:flex;gap:12px;flex-shrink:0;}
+  .b-box{flex:1;border:2px solid #E8DDD8;border-radius:8px;overflow:hidden;}
+  .b-head{padding:6px 10px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#fff;}
+  .b-body{padding:8px 10px;}
+  .note-line{display:block;border-bottom:1px solid #D4C5BC;height:18px;margin-bottom:6px;}
+  .goal-row{display:flex;align-items:center;gap:8px;margin-bottom:6px;}
+  .goal-line{flex:1;border-bottom:1px solid #D4C5BC;height:18px;}
+  /* footer */
+  .ws-footer{border-top:1.5px solid #E8DDD8;padding-top:7px;display:flex;justify-content:space-between;align-items:center;font-size:9px;color:#9E8E86;font-weight:600;margin-top:auto;flex-shrink:0;}
+  .footer-tag{background:#FDF4EC;border:1px solid #E8D5C4;color:#C4622D;padding:2px 8px;border-radius:20px;font-size:8.5px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;}
+  /* mood */
+  .mood-row{display:flex;gap:0;justify-content:space-around;padding:6px 0;}
+  .mood-item{text-align:center;font-size:10px;font-weight:700;}
+  .mood-emoji{font-size:20px;display:block;margin-bottom:2px;}
+  .mood-circle{width:14px;height:14px;border:2px solid #C4622D;border-radius:50%;display:inline-block;margin-top:3px;}
+  /* checklist */
+  .check-row{display:flex;align-items:center;gap:8px;padding:4px 10px;border-bottom:1px solid #E8DDD8;}
+  .check-row:nth-child(even){background:#FAF6F3;}
+  .check-row .cr-icon{font-size:16px;width:24px;text-align:center;flex-shrink:0;}
+  .check-row .cr-text{flex:1;font-size:12px;font-weight:600;}
+  .check-row .cr-note{flex:1.2;border-bottom:1px solid #D4C5BC;height:20px;}
+  .check-row .check-box{flex-shrink:0;}
+  /* skill steps */
+  .step-row{display:flex;align-items:flex-start;gap:10px;padding:5px 10px;border-bottom:1px solid #E8DDD8;}
+  .step-row:nth-child(even){background:#FAF6F3;}
+  .step-num{width:22px;height:22px;background:#C4622D;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;flex-shrink:0;margin-top:1px;}
+  .step-text{flex:1;font-size:12px;font-weight:600;padding-top:2px;}
+  .step-note{flex:1.2;border-bottom:1px solid #D4C5BC;height:22px;margin-top:3px;}
+  /* rating scale */
+  .rating-row{display:flex;align-items:center;gap:6px;}
+  .rating-dot{width:16px;height:16px;border:2px solid #C4622D;border-radius:50%;flex-shrink:0;}
+  .rating-label{font-size:10px;font-weight:600;color:#6B5E58;}
+  /* money */
+  .coin{display:inline-block;width:24px;height:24px;border:2px solid #C4622D;border-radius:50%;text-align:center;line-height:20px;font-size:11px;font-weight:800;margin:2px;}
+  </style>`;
+}
+
+function infoBar(opts) {
+  const f = (label, val) =>
+    `<div class="info-field"><label>${label}</label><div class="info-val">${val || ''}</div></div>`;
+  return `<div class="info-bar">
+    ${f('Name', opts.name)} ${f('Date', '')} ${f('Staff / Caregiver', opts.staff)} ${f(opts.program ? 'Program' : 'Location', opts.program)}
+  </div>`;
+}
+
+function wsHeader(icon, title, sub) {
+  return `<div class="ws-header">
+    <div><div class="ws-brand">Down the Hall Resources</div>
+    <div class="ws-title">${title}</div>
+    <div class="ws-sub">${sub}</div></div>
+    <div class="ws-icon">${icon}</div>
+  </div>`;
+}
+
+function wsFooter(topic) {
+  const d = new Date().toLocaleDateString('en-US',{month:'short',year:'numeric'});
+  return `<div class="ws-footer">
+    <span>downthehallresources.com</span>
+    <span class="footer-tag">Free to print &amp; use</span>
+    <span>${topic} · ${d}</span>
+  </div>`;
+}
+
+/* ══════════════════════════════════════════════
+   WORKSHEET BUILDERS
+══════════════════════════════════════════════ */
+function buildWorksheet(topic, opts) {
+  const builders = {
+    'daily-schedule':  buildDailySchedule,
+    'hygiene':         buildHygiene,
+    'emotions':        buildEmotions,
+    'money':           buildMoney,
+    'cooking':         buildCooking,
+    'safety':          buildSafety,
+    'social':          buildSocial,
+    'job':             buildJob,
+    'selfcare':        buildSelfCare,
+    'grocery':         buildGrocery,
+    'communication':   buildCommunication,
+    'goals':           buildGoals,
+  };
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">${baseStyles()}</head><body>${(builders[topic] || buildDailySchedule)(opts)}</body></html>`;
+}
+
+/* ── DAILY SCHEDULE ── */
+function buildDailySchedule(opts) {
+  const slots = [
+    ['7:00–8:00 am','🏠 🚿 🛏'],['8:00–9:00 am','🍳 🥣 🥤'],['9:00–10:00 am','🎨 📚 🎵'],
+    ['10:00–11:00 am','🧩 🏃 💬'],['11:00–12:00 pm','🎨 📚 🎵'],
+    ['12:00–1:00 pm','🥗 🥪 🍎'],['1:00–2:00 pm','🛋 😴 📖'],['2:00–3:00 pm','🧩 🏃 💬'],
+    ['3:00–4:00 pm','🎨 🎵 🏃'],['4:00–5:00 pm','🍎 🥤 🧃'],['5:00–6:00 pm','🍽 👨‍👩‍👧 🍳'],['6:00–7:00 pm','📺 🎮 📚'],
+  ];
+  const sections = [['🌅 Morning',5],['☀️ Afternoon',4],['🌙 Evening',3]];
+  let rows=''; let si=0; let sIdx=0; let sCount=0;
+  slots.forEach((s,i)=>{
+    if(sCount===0){ rows+=`<tr><td colspan="5" class="section-label">${sections[sIdx][0]}</td></tr>`; sCount=sections[sIdx][1]; sIdx++; }
+    rows+=`<tr><td class="td-pad" style="font-size:10px;font-weight:700;color:#6B5E58;width:12%;white-space:nowrap;">${s[0]}</td>
+      <td style="width:30%"><span class="write-line"></span></td>
+      <td style="width:12%;text-align:center;font-size:12px;padding:0 4px;">${s[1]}</td>
+      <td style="width:36%"><span class="write-line"></span></td>
+      <td style="width:10%;text-align:center;"><span class="check-box"></span></td></tr>`;
+    sCount--;
+  });
+  return `<div class="page">
+    ${wsHeader('📅','My Daily Schedule','Daily Routine &amp; Activity Tracker')}
+    ${infoBar(opts)}
+    <div class="instructions">📋 Write the planned activity in each row. Circle the picture that matches. Check the box when complete. Circle mood at the bottom.</div>
+    <table class="ws-table" style="flex:1;">
+      <thead><tr><th style="width:12%">Time</th><th style="width:30%">Activity</th><th style="width:12%;text-align:center">Picture</th><th style="width:36%">Notes / How It Went</th><th style="width:10%;text-align:center">Done ✓</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table>
+    <div class="bottom-row" style="margin-bottom:10px;">
+      <div class="b-box" style="flex:1.2"><div class="b-head" style="background:#C4622D">😊 How Did Today Feel?</div>
+        <div class="b-body"><div class="mood-row">
+          <div class="mood-item"><span class="mood-emoji">😄</span>Great<br><span class="mood-circle"></span></div>
+          <div class="mood-item"><span class="mood-emoji">🙂</span>Good<br><span class="mood-circle"></span></div>
+          <div class="mood-item"><span class="mood-emoji">😐</span>Okay<br><span class="mood-circle"></span></div>
+          <div class="mood-item"><span class="mood-emoji">😕</span>Hard<br><span class="mood-circle"></span></div>
+          <div class="mood-item"><span class="mood-emoji">😢</span>Tough<br><span class="mood-circle"></span></div>
+        </div></div></div>
+      <div class="b-box" style="flex:1.2"><div class="b-head" style="background:#4A7C6F">🎯 Today's Goals</div>
+        <div class="b-body">
+          ${[1,2,3,4].map(()=>`<div class="goal-row"><span class="check-box" style="border-color:#4A7C6F;flex-shrink:0;"></span><span class="goal-line"></span></div>`).join('')}
+        </div></div>
+      <div class="b-box" style="flex:1.6"><div class="b-head" style="background:#5B8199">📝 Staff Notes</div>
+        <div class="b-body">${[1,2,3,4,5].map(()=>`<span class="note-line"></span>`).join('')}</div></div>
+    </div>
+    ${wsFooter('Daily Schedule')}
+  </div>`;
+}
+
+/* ── PERSONAL HYGIENE ── */
+function buildHygiene(opts) {
+  const steps = [
+    ['🚿','Shower / Bathe',''],['🧼','Wash hands thoroughly',''],
+    ['🦷','Brush teeth (top & bottom)',''],['👅','Use mouthwash / floss',''],
+    ['💇','Comb / brush hair',''],['👕','Put on clean clothes',''],
+    ['🧴','Apply deodorant',''],['✂️','Trim nails if needed',''],
+    ['👃','Blow nose / clean face',''],['🧦','Put on socks and shoes',''],
+    ['🪞','Check appearance in mirror',''],['💊','Take daily medication',''],
+  ];
+  const rows = steps.map(s=>`<tr>
+    <td style="text-align:center;font-size:18px;width:6%;padding:3px 6px;">${s[0]}</td>
+    <td class="td-pad" style="font-size:12px;font-weight:700;width:36%;">${s[1]}</td>
+    <td style="width:40%"><span class="write-line"></span></td>
+    <td style="text-align:center;width:9%;"><span class="check-box"></span></td>
+    <td style="text-align:center;width:9%;">
+      <div style="display:flex;gap:3px;justify-content:center;">
+        <span class="circle-box" style="width:14px;height:14px;" title="Independent"></span>
+        <span class="circle-box" style="width:14px;height:14px;" title="With help"></span>
+      </div>
+    </td>
+  </tr>`).join('');
+  return `<div class="page">
+    ${wsHeader('🪥','Personal Hygiene Checklist','Daily Grooming &amp; Self-Care Routine')}
+    ${infoBar(opts)}
+    <div class="instructions">🪥 Go through each step. Write any notes in the box. Check when done. Circle <strong>I</strong> if done independently, <strong>H</strong> if done with help.</div>
+    <div style="display:flex;justify-content:flex-end;gap:12px;font-size:10px;font-weight:700;color:#6B5E58;margin-bottom:6px;padding-right:4px;">
+      <span>✓ Done</span><span>I = Independent &nbsp; H = Help</span>
+    </div>
+    <table class="ws-table" style="flex:1;">
+      <thead><tr><th style="width:6%"></th><th style="width:36%">Step</th><th style="width:40%">Notes</th><th style="width:9%;text-align:center">Done</th><th style="width:9%;text-align:center">I / H</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table>
+    <div class="bottom-row" style="margin-bottom:10px;">
+      <div class="b-box"><div class="b-head" style="background:#C4622D">😊 How Did I Feel?</div>
+        <div class="b-body"><div class="mood-row">
+          <div class="mood-item"><span class="mood-emoji">😄</span>Great<br><span class="mood-circle"></span></div>
+          <div class="mood-item"><span class="mood-emoji">🙂</span>Good<br><span class="mood-circle"></span></div>
+          <div class="mood-item"><span class="mood-emoji">😐</span>Okay<br><span class="mood-circle"></span></div>
+          <div class="mood-item"><span class="mood-emoji">😕</span>Hard<br><span class="mood-circle"></span></div>
+        </div></div></div>
+      <div class="b-box" style="flex:2"><div class="b-head" style="background:#5B8199">📝 Staff Notes &amp; Observations</div>
+        <div class="b-body">${[1,2,3,4].map(()=>`<span class="note-line"></span>`).join('')}</div></div>
+    </div>
+    ${wsFooter('Personal Hygiene')}
+  </div>`;
+}
+
+/* ── EMOTIONS ── */
+function buildEmotions(opts) {
+  const emotions = [
+    {e:'😄',name:'Happy',color:'#4A7C6F',desc:'I feel good inside. I might smile or laugh.'},
+    {e:'😢',name:'Sad',color:'#5B8199',desc:'Something is wrong or I miss someone.'},
+    {e:'😠',name:'Angry',color:'#C4622D',desc:'Something feels unfair or I am frustrated.'},
+    {e:'😨',name:'Scared',color:'#7A5C8A',desc:'I feel unsafe or something worries me.'},
+    {e:'😤',name:'Frustrated',color:'#B07030',desc:'Something is too hard or not working.'},
+    {e:'😴',name:'Tired',color:'#6B5E58',desc:'My body or mind needs rest.'},
+    {e:'🤩',name:'Excited',color:'#2E8B57',desc:'Something great is about to happen!'},
+    {e:'😰',name:'Overwhelmed',color:'#8B4545',desc:'Too much is happening at once.'},
+  ];
+  const cards = emotions.map(em=>`
+    <div style="border:2px solid ${em.color};border-radius:10px;padding:10px;background:#fff;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+        <span style="font-size:28px;">${em.e}</span>
+        <div><div style="font-size:14px;font-weight:800;color:${em.color}">${em.name}</div>
+        <div style="font-size:10px;color:#6B5E58;font-weight:600;">${em.desc}</div></div>
+      </div>
+      <div style="font-size:10px;font-weight:700;color:#6B5E58;margin-bottom:3px;text-transform:uppercase;letter-spacing:.05em;">When do I feel this way?</div>
+      <div style="border-bottom:1px solid #D4C5BC;height:18px;margin-bottom:4px;"></div>
+      <div style="font-size:10px;font-weight:700;color:#6B5E58;margin-bottom:3px;text-transform:uppercase;letter-spacing:.05em;">What helps me?</div>
+      <div style="border-bottom:1px solid #D4C5BC;height:18px;"></div>
+    </div>`).join('');
+
+  return `<div class="page">
+    ${wsHeader('😊','My Emotions &amp; Feelings','Understanding and Expressing How I Feel')}
+    ${infoBar(opts)}
+    <div class="instructions">😊 Look at each feeling card. Write when you feel that way and what helps you feel better. Circle the feelings you felt today.</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;flex:1;align-content:start;">${cards}</div>
+    <div style="margin-top:12px;border:2px solid #E8DDD8;border-radius:8px;overflow:hidden;flex-shrink:0;">
+      <div class="b-head" style="background:#4A7C6F;">🎯 Today I felt... (circle all that apply)</div>
+      <div class="b-body" style="display:flex;flex-wrap:wrap;gap:10px;padding:10px;">
+        ${emotions.map(em=>`<div style="border:2px solid #E8DDD8;border-radius:8px;padding:5px 12px;font-size:12px;font-weight:700;display:flex;align-items:center;gap:6px;">${em.e} ${em.name}</div>`).join('')}
+      </div>
+    </div>
+    <div class="bottom-row" style="margin-top:10px;margin-bottom:8px;">
+      <div class="b-box" style="flex:2"><div class="b-head" style="background:#5B8199">📝 Notes for Today</div>
+        <div class="b-body">${[1,2,3].map(()=>`<span class="note-line"></span>`).join('')}</div></div>
+      <div class="b-box"><div class="b-head" style="background:#C4622D">📅 Date &amp; Staff</div>
+        <div class="b-body" style="padding:10px;">
+          <div style="font-size:9px;font-weight:700;color:#6B5E58;text-transform:uppercase;margin-bottom:2px;">Date</div>
+          <div style="border-bottom:1px solid #D4C5BC;height:22px;margin-bottom:8px;"></div>
+          <div style="font-size:9px;font-weight:700;color:#6B5E58;text-transform:uppercase;margin-bottom:2px;">Staff</div>
+          <div style="border-bottom:1px solid #D4C5BC;height:22px;"></div>
+        </div></div>
+    </div>
+    ${wsFooter('Emotions & Feelings')}
+  </div>`;
+}
+
+/* ── MONEY SKILLS ── */
+function buildMoney(opts) {
+  const coins = [
+    {symbol:'1¢',name:'Penny',value:'$0.01',color:'#b87333',img:'🪙'},
+    {symbol:'5¢',name:'Nickel',value:'$0.05',color:'#A0A0A0',img:'🪙'},
+    {symbol:'10¢',name:'Dime',value:'$0.10',color:'#A0A0A0',img:'🪙'},
+    {symbol:'25¢',name:'Quarter',value:'$0.25',color:'#A0A0A0',img:'🪙'},
+    {symbol:'$1',name:'Dollar Bill',value:'$1.00',color:'#4A7C6F',img:'💵'},
+    {symbol:'$5',name:'Five Dollars',value:'$5.00',color:'#4A7C6F',img:'💵'},
+  ];
+  const coinCards = coins.map(c=>`
+    <div style="border:2px solid #E8DDD8;border-radius:8px;padding:8px;text-align:center;background:#fff;">
+      <div style="font-size:26px;">${c.img}</div>
+      <div style="font-size:14px;font-weight:900;color:${c.color};">${c.symbol}</div>
+      <div style="font-size:10px;font-weight:700;color:#6B5E58;">${c.name}</div>
+      <div style="font-size:10px;font-weight:600;color:#9E8E86;">${c.value}</div>
+    </div>`).join('');
+
+  const problems = [
+    {q:'An apple costs 75¢. You give $1.00. How much change do you get?',a:''},
+    {q:'You have 3 quarters and 2 dimes. How much money do you have?',a:''},
+    {q:'A snack costs $1.50. You have $2.00. Can you buy it? Yes / No',a:''},
+    {q:'You earn $8 for helping. You spend $3.50. How much do you have left?',a:''},
+    {q:'A bus ticket costs $1.75. What coins could you use to pay?',a:''},
+    {q:'You want to save $10. You have $6.25. How much more do you need?',a:''},
+  ];
+
+  return `<div class="page">
+    ${wsHeader('💵','Money Skills','Coins, Bills &amp; Everyday Math')}
+    ${infoBar(opts)}
+    <div class="instructions">💵 Review the coins and bills. Then solve the practice problems. Show your work in the space provided.</div>
+    <div style="font-size:11px;font-weight:700;color:#6B5E58;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;">Know Your Money</div>
+    <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-bottom:12px;">${coinCards}</div>
+    <div style="font-size:11px;font-weight:700;color:#6B5E58;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;">Practice Problems</div>
+    <table class="ws-table" style="flex:1;">
+      <thead><tr><th style="width:5%">#</th><th style="width:55%">Problem</th><th style="width:25%">My Work</th><th style="width:15%">Answer</th></tr></thead>
+      <tbody>${problems.map((p,i)=>`<tr>
+        <td class="td-pad" style="font-size:11px;font-weight:800;color:#C4622D;width:5%">${i+1}</td>
+        <td class="td-pad" style="font-size:11.5px;font-weight:600;width:55%">${p.q}</td>
+        <td style="width:25%"><span class="write-line"></span></td>
+        <td style="width:15%"><span class="write-line"></span></td>
+      </tr>`).join('')}</tbody>
+    </table>
+    <div class="bottom-row" style="margin-top:10px;margin-bottom:8px;">
+      <div class="b-box"><div class="b-head" style="background:#4A7C6F">🎯 Score</div>
+        <div class="b-body" style="text-align:center;padding:12px;">
+          <div style="font-size:28px;font-weight:900;color:#4A7C6F;">_____ / 6</div>
+          <div style="font-size:10px;font-weight:600;color:#6B5E58;margin-top:4px;">problems correct</div>
+        </div></div>
+      <div class="b-box" style="flex:3"><div class="b-head" style="background:#5B8199">📝 Staff Notes</div>
+        <div class="b-body">${[1,2,3].map(()=>`<span class="note-line"></span>`).join('')}</div></div>
+    </div>
+    ${wsFooter('Money Skills')}
+  </div>`;
+}
+
+/* ── COOKING ── */
+function buildCooking(opts) {
+  const customSteps = opts.custom ? opts.custom.split('\n').filter(Boolean) : [];
+  const steps = customSteps.length > 0 ? customSteps : [
+    'Wash your hands before starting','Gather all ingredients and tools',
+    'Read through the whole recipe first','Measure ingredients carefully',
+    'Follow each step in order','Use oven mitts when touching hot items',
+    'Stir / mix as directed','Check that food is cooked through',
+    'Turn off stove or oven when done','Clean up your workspace',
+    'Put leftovers away safely','Wash all dishes used',
+  ];
+
+  return `<div class="page">
+    ${wsHeader('🍳','Cooking &amp; Meal Prep','Step-by-Step Recipe Tracker')}
+    ${infoBar(opts)}
+    <div class="instructions">🍳 Follow each step in order. Check the box when the step is done. Write notes about how it went.</div>
+    <div style="flex:1;overflow:hidden;">
+    ${steps.map((s,i)=>`<div class="step-row">
+      <div class="step-num">${i+1}</div>
+      <div class="step-text">${s}</div>
+      <div class="step-note"></div>
+      <div style="margin-left:8px;flex-shrink:0;"><span class="check-box"></span></div>
+    </div>`).join('')}
+    </div>
+    <div class="bottom-row" style="margin-top:10px;margin-bottom:8px;">
+      <div class="b-box"><div class="b-head" style="background:#C4622D">😊 How Did It Taste?</div>
+        <div class="b-body"><div class="mood-row">
+          <div class="mood-item"><span class="mood-emoji">😋</span>Yummy<br><span class="mood-circle"></span></div>
+          <div class="mood-item"><span class="mood-emoji">🙂</span>Good<br><span class="mood-circle"></span></div>
+          <div class="mood-item"><span class="mood-emoji">😐</span>Okay<br><span class="mood-circle"></span></div>
+          <div class="mood-item"><span class="mood-emoji">😬</span>Not great<br><span class="mood-circle"></span></div>
+        </div></div></div>
+      <div class="b-box" style="flex:2"><div class="b-head" style="background:#5B8199">📝 Staff Notes</div>
+        <div class="b-body">${[1,2,3].map(()=>`<span class="note-line"></span>`).join('')}</div></div>
+    </div>
+    ${wsFooter('Cooking & Meal Prep')}
+  </div>`;
+}
+
+/* ── COMMUNITY SAFETY ── */
+function buildSafety(opts) {
+  const topics = [
+    {icon:'🚦',title:'Crossing the Street',items:['Wait for the walk signal','Look left, right, then left again','Walk — do not run','Stay in the crosswalk','Make eye contact with drivers']},
+    {icon:'🚌',title:'Using Public Transit',items:['Wait in a safe area','Have your fare/card ready','Let passengers exit first','Find a seat or hold a rail','Know your stop in advance']},
+    {icon:'🆘',title:'Getting Help',items:['Call 911 for emergencies','Know your home address','Find a safe adult or officer','Stay calm and speak clearly','Do not talk to strangers alone']},
+    {icon:'🔥',title:'Fire Safety',items:['Know your exit routes','Do not use elevators','Get low under smoke','Meet at the meeting point','Never go back inside']},
+  ];
+  return `<div class="page">
+    ${wsHeader('🦺','Community Safety','Staying Safe in Public Spaces')}
+    ${infoBar(opts)}
+    <div class="instructions">🦺 Review each safety topic. Circle YES if you know this rule. Check the box when you have practiced it. Write questions in the notes box.</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;flex:1;align-content:start;">
+    ${topics.map(t=>`<div style="border:2px solid #E8DDD8;border-radius:10px;overflow:hidden;">
+      <div style="background:#C4622D;color:#fff;padding:7px 12px;font-size:12px;font-weight:800;">${t.icon} &nbsp;${t.title}</div>
+      ${t.items.map(item=>`<div class="check-row">
+        <span class="cr-text" style="font-size:11.5px;">${item}</span>
+        <div style="display:flex;gap:4px;align-items:center;flex-shrink:0;">
+          <span style="font-size:9px;font-weight:700;color:#6B5E58;">YES</span>
+          <span class="circle-box" style="width:16px;height:16px;margin:2px;"></span>
+        </div>
+        <span class="check-box" style="margin:2px 4px;"></span>
+      </div>`).join('')}
+    </div>`).join('')}
+    </div>
+    <div class="bottom-row" style="margin-top:10px;margin-bottom:8px;">
+      <div class="b-box" style="flex:3"><div class="b-head" style="background:#5B8199">📝 Questions &amp; Notes</div>
+        <div class="b-body">${[1,2,3].map(()=>`<span class="note-line"></span>`).join('')}</div></div>
+      <div class="b-box"><div class="b-head" style="background:#4A7C6F">📅 Reviewed With</div>
+        <div class="b-body" style="padding:8px;">
+          <div style="border-bottom:1px solid #D4C5BC;height:22px;margin-bottom:8px;"></div>
+          <div style="font-size:9px;font-weight:700;color:#6B5E58;margin-bottom:2px;text-transform:uppercase;">Date</div>
+          <div style="border-bottom:1px solid #D4C5BC;height:22px;"></div>
+        </div></div>
+    </div>
+    ${wsFooter('Community Safety')}
+  </div>`;
+}
+
+/* ── SOCIAL SKILLS ── */
+function buildSocial(opts) {
+  const scenarios = [
+    {s:'Someone says hello to you',options:['Say hello back','Ignore them','Walk away'],correct:0},
+    {s:'You want to join a group activity',options:['Ask "Can I join?"','Push in','Wait and watch forever'],correct:0},
+    {s:'Someone is speaking and you have something to say',options:['Interrupt right away','Wait for a pause, then speak','Yell louder'],correct:1},
+    {s:'A friend seems sad',options:['Ask if they are okay','Make fun of them','Pretend not to notice'],correct:0},
+    {s:'You disagree with someone',options:['Yell and argue','Calmly say "I see it differently"','Walk away angry'],correct:1},
+    {s:'You need help with something',options:['Give up','Ask politely for help','Demand someone help you'],correct:0},
+  ];
+  const skills = [
+    {skill:'Making eye contact',practice:'Look at the person speaking (briefly is okay)'},
+    {skill:'Active listening',practice:'Nod, say "I see", do not look at your phone'},
+    {skill:'Taking turns',practice:'Wait until the other person finishes speaking'},
+    {skill:'Personal space',practice:'Stay an arm\'s length away from others'},
+    {skill:'Using a kind voice',practice:'Speak at a normal volume and tone'},
+  ];
+  return `<div class="page">
+    ${wsHeader('🤝','Social Skills','Building Positive Connections')}
+    ${infoBar(opts)}
+    <div class="instructions">🤝 Part 1: Circle the best choice for each situation. Part 2: Rate how comfortable you feel with each skill.</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;">
+    ${scenarios.map((sc,i)=>`<div style="border:2px solid #E8DDD8;border-radius:8px;padding:8px;background:#fff;">
+      <div style="font-size:10px;font-weight:700;color:#C4622D;margin-bottom:4px;">SITUATION ${i+1}</div>
+      <div style="font-size:11.5px;font-weight:700;margin-bottom:6px;">${sc.s}</div>
+      ${sc.options.map((o,oi)=>`<div style="display:flex;align-items:center;gap:6px;margin-bottom:3px;">
+        <span class="circle-box" style="width:14px;height:14px;margin:0;flex-shrink:0;"></span>
+        <span style="font-size:11px;font-weight:600;">${String.fromCharCode(65+oi)}. ${o}</span>
+      </div>`).join('')}
+    </div>`).join('')}
+    </div>
+    <div style="font-size:11px;font-weight:700;color:#6B5E58;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;">Part 2 — Rate Your Skills (circle a number)</div>
+    <table class="ws-table">
+      <thead><tr><th>Skill</th><th>How to Practice</th><th style="text-align:center">Not yet 1→5 Very comfortable</th><th style="text-align:center;width:12%">Goal</th></tr></thead>
+      <tbody>${skills.map(sk=>`<tr>
+        <td class="td-pad" style="font-size:12px;font-weight:700;">${sk.skill}</td>
+        <td class="td-pad" style="font-size:11px;font-weight:600;color:#6B5E58;">${sk.practice}</td>
+        <td style="text-align:center;padding:4px;">
+          <div style="display:flex;justify-content:center;gap:6px;">
+            ${[1,2,3,4,5].map(n=>`<span class="circle-box" style="width:18px;height:18px;margin:0;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;">${n}</span>`).join('')}
+          </div>
+        </td>
+        <td style="width:12%"><span class="write-line"></span></td>
+      </tr>`).join('')}</tbody>
+    </table>
+    <div class="bottom-row" style="margin-top:10px;margin-bottom:8px;">
+      <div class="b-box" style="flex:3"><div class="b-head" style="background:#5B8199">📝 Staff Observations</div>
+        <div class="b-body">${[1,2,3].map(()=>`<span class="note-line"></span>`).join('')}</div></div>
+    </div>
+    ${wsFooter('Social Skills')}
+  </div>`;
+}
+
+/* ── JOB / VOCATIONAL ── */
+function buildJob(opts) {
+  const tasks = [
+    {task:'Arrive on time',how:'Set an alarm 30 min before shift'},
+    {task:'Clock in / sign in',how:'Find the time sheet or machine'},
+    {task:'Review today\'s tasks',how:'Check with supervisor at start'},
+    {task:'Complete assigned work',how:'Focus on one task at a time'},
+    {task:'Ask for help when needed',how:'Politely say "Can you help me?"'},
+    {task:'Take scheduled breaks',how:'Use the break room at set times'},
+    {task:'Keep work area clean',how:'Tidy up as you go'},
+    {task:'Communicate issues promptly',how:'Tell supervisor right away'},
+    {task:'Complete end-of-day tasks',how:'Check your task list'},
+    {task:'Clock out properly',how:'Sign out before you leave'},
+  ];
+  return `<div class="page">
+    ${wsHeader('💼','Job Skills Tracker','Workplace Readiness &amp; Daily Work Habits')}
+    ${infoBar(opts)}
+    <div class="instructions">💼 Complete each task during your shift. Check the box when done. Rate how it went (1=Hard, 3=Great). Write notes in the notes column.</div>
+    <div style="display:flex;justify-content:flex-end;gap:16px;font-size:10px;font-weight:700;color:#6B5E58;margin-bottom:6px;padding-right:4px;">
+      <span>Rating: 1 = Hard &nbsp; 2 = Okay &nbsp; 3 = Great</span>
+    </div>
+    <table class="ws-table" style="flex:1;">
+      <thead><tr><th>#</th><th>Work Task</th><th>How To Do It</th><th style="text-align:center">Done</th><th style="text-align:center">Rating</th><th>Notes</th></tr></thead>
+      <tbody>${tasks.map((t,i)=>`<tr>
+        <td class="td-pad" style="font-size:11px;font-weight:800;color:#C4622D;width:4%">${i+1}</td>
+        <td class="td-pad" style="font-size:12px;font-weight:700;width:26%">${t.task}</td>
+        <td class="td-pad" style="font-size:11px;font-weight:600;color:#6B5E58;width:28%">${t.how}</td>
+        <td style="text-align:center;width:8%"><span class="check-box"></span></td>
+        <td style="text-align:center;width:14%">
+          <div style="display:flex;justify-content:center;gap:3px;">
+            ${[1,2,3].map(n=>`<span class="circle-box" style="width:16px;height:16px;margin:0;display:inline-flex;align-items:center;justify-content:center;font-size:9px;font-weight:800;">${n}</span>`).join('')}
+          </div>
+        </td>
+        <td style="width:20%"><span class="write-line"></span></td>
+      </tr>`).join('')}</tbody>
+    </table>
+    <div class="bottom-row" style="margin-top:10px;margin-bottom:8px;">
+      <div class="b-box"><div class="b-head" style="background:#4A7C6F">🏆 Today's Win</div>
+        <div class="b-body"><span class="note-line"></span><span class="note-line"></span></div></div>
+      <div class="b-box" style="flex:2"><div class="b-head" style="background:#C4622D">📝 Supervisor Notes</div>
+        <div class="b-body">${[1,2,3].map(()=>`<span class="note-line"></span>`).join('')}</div></div>
+      <div class="b-box"><div class="b-head" style="background:#5B8199">✍️ Supervisor Initials</div>
+        <div class="b-body" style="display:flex;align-items:center;justify-content:center;height:60px;">
+          <div style="width:60px;height:60px;border:2px solid #D4C5BC;border-radius:8px;"></div>
+        </div></div>
+    </div>
+    ${wsFooter('Job & Vocational Skills')}
+  </div>`;
+}
+
+/* ── SELF-CARE CHECKLIST ── */
+function buildSelfCare(opts) {
+  const categories = [
+    {cat:'🧴 Body Care', color:'#C4622D', items:['Shower or bathe','Wash and dry hair','Apply lotion if needed','Clip or file nails','Clean ears gently']},
+    {cat:'🦷 Oral Care', color:'#5B8199', items:['Brush teeth (morning)','Brush teeth (night)','Floss teeth','Use mouthwash','Replace toothbrush monthly']},
+    {cat:'👕 Getting Dressed', color:'#4A7C6F', items:['Pick clean, weather-right clothes','Dress in correct order','Check for stains or tears','Wear appropriate shoes','Check appearance before going out']},
+    {cat:'🧠 Mental Wellness', color:'#7A5C8A', items:['Take a quiet break if needed','Practice deep breathing','Talk to someone if upset','Do something I enjoy','Get enough sleep tonight']},
+  ];
+  return `<div class="page">
+    ${wsHeader('🛁','Self-Care Checklist','Daily Wellness &amp; Personal Care Routine')}
+    ${infoBar(opts)}
+    <div class="instructions">🛁 Work through each section. Check the box when done. Circle <strong>I</strong> = Independent, <strong>R</strong> = Reminder needed, <strong>H</strong> = Help needed.</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;flex:1;align-content:start;">
+    ${categories.map(cat=>`<div style="border:2px solid #E8DDD8;border-radius:10px;overflow:hidden;">
+      <div style="background:${cat.color};color:#fff;padding:7px 12px;font-size:12px;font-weight:800;">${cat.cat}</div>
+      ${cat.items.map(item=>`<div class="check-row">
+        <span class="cr-text" style="font-size:11.5px;">${item}</span>
+        <div style="display:flex;gap:3px;align-items:center;flex-shrink:0;margin-right:4px;">
+          ${['I','R','H'].map(l=>`<span style="font-size:9px;font-weight:700;color:#6B5E58;border:1.5px solid #D4C5BC;border-radius:50%;width:16px;height:16px;display:inline-flex;align-items:center;justify-content:center;">${l}</span>`).join('')}
+        </div>
+        <span class="check-box" style="margin:2px;"></span>
+      </div>`).join('')}
+    </div>`).join('')}
+    </div>
+    <div class="bottom-row" style="margin-top:10px;margin-bottom:8px;">
+      <div class="b-box"><div class="b-head" style="background:#C4622D">😊 How I Feel Today</div>
+        <div class="b-body"><div class="mood-row">
+          <div class="mood-item"><span class="mood-emoji">😄</span>Great<br><span class="mood-circle"></span></div>
+          <div class="mood-item"><span class="mood-emoji">🙂</span>Good<br><span class="mood-circle"></span></div>
+          <div class="mood-item"><span class="mood-emoji">😐</span>Okay<br><span class="mood-circle"></span></div>
+          <div class="mood-item"><span class="mood-emoji">😕</span>Hard<br><span class="mood-circle"></span></div>
+        </div></div></div>
+      <div class="b-box" style="flex:2.5"><div class="b-head" style="background:#5B8199">📝 Staff / Caregiver Notes</div>
+        <div class="b-body">${[1,2,3].map(()=>`<span class="note-line"></span>`).join('')}</div></div>
+    </div>
+    ${wsFooter('Self-Care Checklist')}
+  </div>`;
+}
+
+/* ── GROCERY SHOPPING ── */
+function buildGrocery(opts) {
+  const customItems = opts.custom ? opts.custom.split('\n').filter(Boolean) : [];
+  const categories = ['Produce 🥦','Dairy 🥛','Bread & Grains 🍞','Meat & Protein 🥩','Frozen Foods 🧊','Snacks & Other 🍪'];
+
+  return `<div class="page">
+    ${wsHeader('🛒','Grocery Shopping List','Community Shopping Skills Worksheet')}
+    ${infoBar(opts)}
+    <div class="instructions">🛒 Write items needed in each category. Check the box when you find the item. Write the price. Add up the total at the bottom.</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;flex:1;align-content:start;">
+    ${categories.map((cat,ci)=>{
+      const catItems = customItems.slice(ci*3,(ci+1)*3);
+      return `<div style="border:2px solid #E8DDD8;border-radius:10px;overflow:hidden;">
+        <div style="background:#C4622D;color:#fff;padding:7px 12px;font-size:12px;font-weight:800;">${cat}</div>
+        <table style="width:100%;border-collapse:collapse;">
+          <tr style="background:#FAF6F3;"><th style="padding:4px 8px;font-size:9px;font-weight:700;color:#6B5E58;text-align:left;text-transform:uppercase;width:50%">Item</th><th style="font-size:9px;font-weight:700;color:#6B5E58;text-align:center;width:15%">✓</th><th style="font-size:9px;font-weight:700;color:#6B5E58;text-align:right;padding-right:8px;width:35%">Price $</th></tr>
+          ${[0,1,2,3].map(r=>`<tr style="${r%2===0?'background:#fff':'background:#FAF6F3'}"><td style="padding:3px 8px;"><span style="display:block;border-bottom:1px solid #D4C5BC;height:18px;font-size:11px;font-weight:600;">${catItems[r]||''}</span></td><td style="text-align:center;"><span class="check-box" style="width:16px;height:16px;margin:2px auto;"></span></td><td style="padding:3px 8px;"><span style="display:block;border-bottom:1px solid #D4C5BC;height:18px;"></span></td></tr>`).join('')}
+        </table>
+      </div>`;
+    }).join('')}
+    </div>
+    <div style="display:flex;gap:12px;margin-top:10px;margin-bottom:8px;flex-shrink:0;">
+      <div style="border:2px solid #E8DDD8;border-radius:8px;overflow:hidden;flex:1;">
+        <div class="b-head" style="background:#4A7C6F;">💰 Budget Tracker</div>
+        <div class="b-body" style="display:flex;gap:20px;align-items:center;padding:8px 12px;">
+          <div><div style="font-size:9px;font-weight:700;color:#6B5E58;text-transform:uppercase;">Budget</div><div style="font-size:18px;font-weight:900;color:#4A7C6F;">$<span style="border-bottom:2px solid #4A7C6F;padding-bottom:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div></div>
+          <div style="font-size:18px;font-weight:800;color:#9E8E86;">−</div>
+          <div><div style="font-size:9px;font-weight:700;color:#6B5E58;text-transform:uppercase;">Total Spent</div><div style="font-size:18px;font-weight:900;color:#C4622D;">$<span style="border-bottom:2px solid #C4622D;padding-bottom:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div></div>
+          <div style="font-size:18px;font-weight:800;color:#9E8E86;">=</div>
+          <div><div style="font-size:9px;font-weight:700;color:#6B5E58;text-transform:uppercase;">Left Over</div><div style="font-size:18px;font-weight:900;color:#2C2420;">$<span style="border-bottom:2px solid #2C2420;padding-bottom:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div></div>
+        </div>
+      </div>
+      <div style="border:2px solid #E8DDD8;border-radius:8px;overflow:hidden;flex:1.5;">
+        <div class="b-head" style="background:#5B8199;">📝 Notes</div>
+        <div class="b-body">${[1,2,3].map(()=>`<span class="note-line"></span>`).join('')}</div>
+      </div>
+    </div>
+    ${wsFooter('Grocery Shopping')}
+  </div>`;
+}
+
+/* ── COMMUNICATION ── */
+function buildCommunication(opts) {
+  const phrases = [
+    {situation:'Greeting someone',phrase:'Hello! How are you?',notes:''},
+    {situation:'Asking for help',phrase:'Excuse me, can you help me please?',notes:''},
+    {situation:'Not understanding',phrase:'I\'m sorry, can you say that again?',notes:''},
+    {situation:'Feeling upset',phrase:'I need a break. I\'ll be back in a few minutes.',notes:''},
+    {situation:'Saying no politely',phrase:'No thank you, I don\'t want that right now.',notes:''},
+    {situation:'Joining a conversation',phrase:'Excuse me, may I say something?',notes:''},
+    {situation:'Thanking someone',phrase:'Thank you so much for your help.',notes:''},
+    {situation:'Leaving a conversation',phrase:'It was nice talking with you. Have a good day!',notes:''},
+  ];
+  const feelings = ['Happy','Sad','Angry','Scared','Confused','Excited','Tired','Overwhelmed'];
+  return `<div class="page">
+    ${wsHeader('💬','Communication Skills','Phrases, Feelings &amp; Conversation Practice')}
+    ${infoBar(opts)}
+    <div class="instructions">💬 Part 1: Practice saying each phrase out loud. Check the box when you feel comfortable with it. Part 2: Circle all feelings you know how to express.</div>
+    <table class="ws-table" style="flex:1;margin-bottom:10px;">
+      <thead><tr><th style="width:25%">Situation</th><th style="width:42%">What to Say</th><th style="width:25%">Notes / Practice</th><th style="width:8%;text-align:center">Ready ✓</th></tr></thead>
+      <tbody>${phrases.map(p=>`<tr>
+        <td class="td-pad" style="font-size:11.5px;font-weight:700;">${p.situation}</td>
+        <td class="td-pad" style="font-size:12px;font-weight:800;color:#4A7C6F;font-style:italic;">"${p.phrase}"</td>
+        <td><span class="write-line"></span></td>
+        <td style="text-align:center;"><span class="check-box"></span></td>
+      </tr>`).join('')}</tbody>
+    </table>
+    <div style="border:2px solid #E8DDD8;border-radius:10px;overflow:hidden;flex-shrink:0;margin-bottom:10px;">
+      <div class="b-head" style="background:#4A7C6F;font-size:12px;">🎭 Feelings I Can Express — Circle all you know how to say or show</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;padding:10px 12px;">
+        ${feelings.map(f=>`<div style="border:2px solid #E8DDD8;border-radius:20px;padding:5px 14px;font-size:12px;font-weight:700;">${f}</div>`).join('')}
+        ${[1,2].map(()=>`<div style="border:2px dashed #D4C5BC;border-radius:20px;padding:5px 24px;font-size:12px;font-weight:700;color:#9E8E86;">___________</div>`).join('')}
+      </div>
+    </div>
+    <div class="bottom-row" style="margin-bottom:8px;">
+      <div class="b-box" style="flex:3"><div class="b-head" style="background:#5B8199">📝 Staff / Therapist Notes</div>
+        <div class="b-body">${[1,2,3].map(()=>`<span class="note-line"></span>`).join('')}</div></div>
+      <div class="b-box"><div class="b-head" style="background:#C4622D">🎯 Practice Goal</div>
+        <div class="b-body">${[1,2,3].map(()=>`<span class="note-line"></span>`).join('')}</div></div>
+    </div>
+    ${wsFooter('Communication Skills')}
+  </div>`;
+}
+
+/* ── GOAL TRACKING ── */
+function buildGoals(opts) {
+  const customGoals = opts.custom ? opts.custom.split('\n').filter(Boolean) : [];
+  const goals = customGoals.length > 0 ? customGoals.slice(0,5) :
+    ['Complete morning hygiene routine independently','Attend all scheduled activities this week','Practice asking for help at least once per day','Stay in my calm space when feeling overwhelmed','Try one new food or activity this week'];
+
+  return `<div class="page">
+    ${wsHeader('🎯','Goal Tracking Worksheet','Weekly Progress &amp; Achievement Tracker')}
+    ${infoBar(opts)}
+    <div class="instructions">🎯 Review each goal together. Rate daily progress. Circle the smiley that matches how hard each goal felt. Staff initials go in the last column each day.</div>
+    <div style="flex:1;">
+    ${goals.map((g,i)=>{
+      const colors=['#C4622D','#4A7C6F','#5B8199','#7A5C8A','#B07030'];
+      const c = colors[i%colors.length];
+      return `<div style="border:2px solid #E8DDD8;border-radius:10px;overflow:hidden;margin-bottom:10px;">
+        <div style="background:${c};color:#fff;padding:7px 14px;display:flex;align-items:center;gap:10px;">
+          <span style="font-size:14px;font-weight:900;">Goal ${i+1}</span>
+          <span style="font-size:12px;font-weight:700;flex:1;">${g}</span>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(7,1fr);border-collapse:collapse;">
+          ${['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].map(day=>`
+            <div style="border-right:1px solid #E8DDD8;border-bottom:1px solid #E8DDD8;padding:6px 4px;text-align:center;">
+              <div style="font-size:9px;font-weight:700;color:#6B5E58;text-transform:uppercase;margin-bottom:4px;">${day}</div>
+              <div style="display:flex;justify-content:center;gap:2px;margin-bottom:4px;">
+                ${[1,2,3].map(n=>`<span class="circle-box" style="width:14px;height:14px;margin:0;display:inline-flex;align-items:center;justify-content:center;font-size:8px;font-weight:800;">${n}</span>`).join('')}
+              </div>
+              <div style="font-size:9px;color:#9E8E86;border-top:1px solid #E8DDD8;padding-top:3px;">Staff</div>
+              <div style="border-bottom:1px solid #D4C5BC;height:14px;margin:2px 4px;"></div>
+            </div>`).join('')}
+        </div>
+        <div style="padding:6px 12px;display:flex;align-items:center;gap:12px;background:#FAF6F3;">
+          <span style="font-size:10px;font-weight:700;color:#6B5E58;text-transform:uppercase;letter-spacing:.04em;">Week summary:</span>
+          <span style="flex:1;border-bottom:1px solid #D4C5BC;height:18px;"></span>
+          <div style="display:flex;gap:6px;align-items:center;">
+            <span style="font-size:10px;font-weight:700;color:#6B5E58;">Progress:</span>
+            ${['😄','🙂','😐','😕'].map(e=>`<span style="font-size:16px;">${e}</span><span class="circle-box" style="width:12px;height:12px;margin:0 4px 0 -2px;"></span>`).join('')}
+          </div>
+        </div>
+      </div>`;
+    }).join('')}
+    </div>
+    <div class="bottom-row" style="margin-bottom:8px;">
+      <div class="b-box" style="flex:3"><div class="b-head" style="background:#5B8199">📝 End-of-Week Staff Notes</div>
+        <div class="b-body">${[1,2,3].map(()=>`<span class="note-line"></span>`).join('')}</div></div>
+      <div class="b-box"><div class="b-head" style="background:#4A7C6F">🗓 Week of</div>
+        <div class="b-body" style="padding:10px;"><div style="border-bottom:1px solid #D4C5BC;height:24px;"></div></div></div>
+    </div>
+    ${wsFooter('Goal Tracking')}
+  </div>`;
+}
+
+// Wire up all event listeners once DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+  // Topic buttons
+  document.querySelectorAll('.topic-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() { selectTopic(btn); });
+  });
+
+  // Generate button
+  document.getElementById('generateBtn').addEventListener('click', generateWorksheet);
+
+  // Print button
+  document.getElementById('printBtn').addEventListener('click', printWorksheet);
+});
+</script>
+</body>
+</html>

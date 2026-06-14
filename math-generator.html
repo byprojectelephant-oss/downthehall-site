@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- Google Consent Mode defaults — must be set before gtag.js loads -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-89LMQSQYGT"></script>
+<script>
+  gtag('js', new Date());
+  gtag('config', 'G-89LMQSQYGT');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6956947027653253"
+     crossorigin="anonymous"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Math Worksheet Generator | Down the Hall Resources</title>
+<meta name="description" content="Create free printable addition, subtraction, multiplication, and division worksheets with custom number ranges, problem counts, and answer keys.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://downthehallresources.com/math-generator.html">
+<link rel="icon" type="image/png" href="logo-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Down the Hall Resources">
+<meta property="og:title" content="Free Printable Math Worksheet Generator">
+<meta property="og:description" content="Build custom math worksheets with your choice of operations, number ranges, and answer keys.">
+<meta property="og:url" content="https://downthehallresources.com/math-generator.html">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Math Worksheet Generator",
+  "url": "https://downthehallresources.com/math-generator.html",
+  "description": "A free online tool for creating printable custom math worksheets and answer keys.",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Any",
+  "isAccessibleForFree": true,
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
+}
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Lora:wght@500;600;700&display=swap');
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --walnut:#2C2420; --terracotta:#C4622D; --terra-light:#FDF4EC;
+  --sage:#4A7C6F; --sage-light:#EAF2F0; --linen:#F5F0E8;
+  --mid:#6B5E58; --border:#E8DDD8; --white:#fff;
+}
+body { min-height:100vh; background:var(--linen); color:var(--walnut); font-family:'Nunito',sans-serif; }
+.nav { min-height:58px; padding:12px 28px; background:var(--walnut); display:flex; align-items:center; justify-content:space-between; gap:14px; }
+.nav a { color:rgba(255,255,255,.78); text-decoration:none; font-size:13px; font-weight:800; }
+.brand { display:flex; align-items:center; }
+.brand img { width:185px; height:46px; object-fit:contain; background:#fff; border-radius:6px; padding:3px 7px; }
+.tag { padding:4px 10px; border-radius:20px; background:var(--terracotta); color:white; font-size:10px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; }
+.hero { background:var(--walnut); color:white; text-align:center; padding:28px 24px 48px; }
+.hero h1 { font:700 clamp(28px,4vw,38px)/1.15 'Lora',serif; margin-bottom:8px; }
+.hero h1 span { color:#D98F52; }
+.hero p { max-width:650px; margin:auto; color:#C9BBB3; font-size:14px; line-height:1.6; }
+.layout { max-width:1180px; margin:-22px auto 0; padding:0 22px 54px; display:grid; grid-template-columns:365px minmax(0,1fr); gap:22px; align-items:start; }
+.panel { background:white; border-radius:14px; box-shadow:0 4px 20px rgba(44,36,32,.10); overflow:hidden; }
+.controls { position:sticky; top:16px; }
+.panel-title { padding:15px 19px; background:var(--terracotta); color:white; font-size:13px; font-weight:900; letter-spacing:.07em; text-transform:uppercase; }
+.controls-body { padding:18px; }
+fieldset { border:0; margin:0 0 18px; }
+legend, .label { display:block; margin-bottom:8px; color:var(--mid); font-size:10px; font-weight:900; letter-spacing:.08em; text-transform:uppercase; }
+.operation-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+.operation { position:relative; }
+.operation input { position:absolute; opacity:0; pointer-events:none; }
+.operation label { display:flex; align-items:center; justify-content:center; gap:7px; min-height:43px; padding:8px; border:2px solid var(--border); border-radius:9px; background:white; cursor:pointer; font-weight:800; font-size:13px; }
+.operation input:checked + label { border-color:var(--terracotta); background:var(--terra-light); color:#9D461F; }
+.range-title { margin:13px 0 7px; font-size:12px; font-weight:900; }
+.range-row { display:grid; grid-template-columns:1fr auto 1fr; gap:7px; align-items:end; }
+.mini-label { display:block; margin-bottom:4px; color:var(--mid); font-size:10px; font-weight:800; }
+input[type=number], input[type=text], select {
+  width:100%; min-height:40px; padding:8px 10px; border:2px solid var(--border);
+  border-radius:8px; background:white; color:var(--walnut); font:700 13px 'Nunito',sans-serif;
+}
+input:focus, select:focus { outline:none; border-color:var(--terracotta); }
+.range-separator { padding-bottom:9px; color:var(--mid); font-weight:900; }
+.inline-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+.toggle { display:flex; gap:9px; align-items:flex-start; margin:9px 0; font-size:12px; line-height:1.35; cursor:pointer; }
+.toggle input { width:17px; height:17px; accent-color:var(--sage); flex:0 0 auto; }
+.hint { margin-top:6px; color:var(--mid); font-size:11px; line-height:1.4; }
+.error { display:none; margin:0 0 12px; padding:9px 10px; border-radius:7px; background:#FFF0ED; color:#A23E25; font-size:12px; font-weight:800; }
+.actions { display:grid; gap:9px; }
+button { border:0; border-radius:9px; padding:12px 14px; cursor:pointer; font:900 14px 'Nunito',sans-serif; }
+.generate { background:var(--terracotta); color:white; }
+.generate:hover { background:#A84E22; }
+.print { display:none; background:var(--sage); color:white; }
+.print.visible { display:block; }
+.preview-head { min-height:52px; padding:13px 18px; background:#FAF7F2; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; }
+.preview-head strong { font-size:14px; }
+.status { padding:4px 9px; border-radius:20px; background:var(--border); color:var(--mid); font-size:10px; font-weight:900; letter-spacing:.05em; text-transform:uppercase; }
+.status.ready { color:var(--sage); background:var(--sage-light); }
+.preview-wrap { min-height:760px; padding:18px; background:#EDE7DE; overflow:auto; }
+.placeholder { min-height:650px; display:grid; place-items:center; text-align:center; color:var(--mid); }
+.placeholder div { max-width:330px; }
+.placeholder b { display:block; margin-bottom:7px; font-size:18px; }
+#previewFrame { display:none; width:100%; height:920px; border:0; background:white; box-shadow:0 2px 13px rgba(44,36,32,.12); }
+.site-footer{background:var(--walnut);color:var(--linen);margin-top:20px}.site-footer-inner{max-width:1120px;margin:auto;padding:36px 32px 20px;display:grid;grid-template-columns:minmax(220px,1.35fr) 1fr 1fr;gap:32px}.site-footer-logo{display:inline-flex}.site-footer-logo img{width:190px;height:46px;object-fit:contain;background:#fff;border-radius:6px;padding:3px 7px}.site-footer-tagline{max-width:310px;margin-top:12px;color:rgba(245,240,232,.68);font-size:13px;line-height:1.6}.site-footer h2{margin:0 0 11px;color:var(--linen);font-size:12px;letter-spacing:.08em;text-transform:uppercase}.site-footer-links{display:grid;gap:8px}.site-footer-links a{color:rgba(245,240,232,.72);text-decoration:none;font-size:13px}.site-footer-links a:hover{color:var(--linen)}.site-footer-bottom{max-width:1120px;margin:auto;padding:16px 32px 22px;border-top:1px solid rgba(245,240,232,.12);color:rgba(245,240,232,.48);font-size:12px}
+@media (max-width:850px) {
+  .layout { grid-template-columns:1fr; }
+  .controls { position:static; }
+  .nav .brand { display:none; }
+}
+@media(max-width:700px){.site-footer-inner{grid-template-columns:1fr;padding:32px 20px 20px;gap:24px}.site-footer-bottom{padding:16px 20px 20px}}
+</style>
+</head>
+<body>
+
+<!-- COOKIE CONSENT BANNER -->
+<div id="cookie-consent-banner" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:9999;background:#2C2420;color:#F5F0E8;padding:1rem 1.5rem;flex-wrap:wrap;align-items:center;justify-content:center;gap:1rem;font-family:'Nunito',sans-serif;box-shadow:0 -2px 16px rgba(0,0,0,0.18);">
+  <p style="margin:0;flex:1;min-width:240px;max-width:640px;font-size:0.85rem;line-height:1.6;color:rgba(245,240,232,0.85);">
+    We use cookies for basic analytics and to show ads that help keep this site free. You can accept or decline — see our <a href="legal.html#privacy" style="color:#C4622D;">Privacy Policy</a> for details.
+  </p>
+  <div style="display:flex;gap:0.6rem;flex-shrink:0;">
+    <button id="cookie-decline-btn" style="background:transparent;border:1px solid rgba(245,240,232,0.35);color:#F5F0E8;padding:9px 18px;border-radius:6px;cursor:pointer;font-size:0.82rem;font-family:inherit;">Decline</button>
+    <button id="cookie-accept-btn" style="background:#C4622D;border:none;color:#fff;padding:9px 20px;border-radius:6px;cursor:pointer;font-size:0.82rem;font-weight:500;font-family:inherit;">Accept</button>
+  </div>
+</div>
+<script>
+(function() {
+  var KEY = 'dthr_cookie_consent';
+  var saved = localStorage.getItem(KEY);
+  var banner = document.getElementById('cookie-consent-banner');
+
+  function applyConsent(granted) {
+    gtag('consent', 'update', {
+      'ad_storage': granted ? 'granted' : 'denied',
+      'ad_user_data': granted ? 'granted' : 'denied',
+      'ad_personalization': granted ? 'granted' : 'denied',
+      'analytics_storage': granted ? 'granted' : 'denied'
+    });
+  }
+
+  if (saved === 'granted' || saved === 'denied') {
+    applyConsent(saved === 'granted');
+  } else if (banner) {
+    banner.style.display = 'flex';
+  }
+
+  var acceptBtn = document.getElementById('cookie-accept-btn');
+  var declineBtn = document.getElementById('cookie-decline-btn');
+  if (acceptBtn) acceptBtn.addEventListener('click', function() {
+    localStorage.setItem(KEY, 'granted');
+    applyConsent(true);
+    banner.style.display = 'none';
+  });
+  if (declineBtn) declineBtn.addEventListener('click', function() {
+    localStorage.setItem(KEY, 'denied');
+    applyConsent(false);
+    banner.style.display = 'none';
+  });
+})();
+</script>
+<nav class="nav">
+  <a href="index.html">&larr; Home</a>
+  <a class="brand" href="index.html"><img src="logo-header.png" alt="Down the Hall Resources"></a>
+  <span class="tag">Math Generator</span>
+</nav>
+<header class="hero">
+  <h1>Build a <span>Math Worksheet</span></h1>
+  <p>Choose operations, control both number ranges, and create a printable 8.5 x 11 worksheet directly in your browser.</p>
+</header>
+
+<main class="layout">
+  <aside class="panel controls">
+    <div class="panel-title">Worksheet Options</div>
+    <div class="controls-body">
+      <fieldset>
+        <legend>Operations</legend>
+        <div class="operation-grid">
+          <div class="operation"><input id="opAdd" type="checkbox" value="add" checked><label for="opAdd">+ Addition</label></div>
+          <div class="operation"><input id="opSubtract" type="checkbox" value="subtract"><label for="opSubtract">&minus; Subtraction</label></div>
+          <div class="operation"><input id="opMultiply" type="checkbox" value="multiply"><label for="opMultiply">&times; Multiplication</label></div>
+          <div class="operation"><input id="opDivide" type="checkbox" value="divide"><label for="opDivide">&divide; Division</label></div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Number Ranges</legend>
+        <div class="range-title">First number</div>
+        <div class="range-row">
+          <label><span class="mini-label">Minimum</span><input id="firstMin" type="number" value="1" step="1"></label>
+          <span class="range-separator">to</span>
+          <label><span class="mini-label">Maximum</span><input id="firstMax" type="number" value="10" step="1"></label>
+        </div>
+        <div class="range-title">Second number</div>
+        <div class="range-row">
+          <label><span class="mini-label">Minimum</span><input id="secondMin" type="number" value="1" step="1"></label>
+          <span class="range-separator">to</span>
+          <label><span class="mini-label">Maximum</span><input id="secondMax" type="number" value="10" step="1"></label>
+        </div>
+        <p class="hint">For division, these ranges control the divisor and quotient so answers stay whole.</p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Worksheet Details</legend>
+        <div class="inline-grid">
+          <label><span class="mini-label">Problems</span>
+            <select id="problemCount"><option>12</option><option selected>16</option><option>20</option><option>24</option></select>
+          </label>
+          <label><span class="mini-label">Columns</span>
+            <select id="columnCount">
+              <option value="1">1 column</option>
+              <option value="2" selected>2 columns</option>
+              <option value="3">3 columns</option>
+              <option value="4">4 columns</option>
+            </select>
+          </label>
+        </div>
+        <label style="display:block;margin-top:10px;"><span class="mini-label">Worksheet title</span><input id="worksheetTitle" type="text" value="Math Practice" maxlength="45"></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Problem Rules</legend>
+        <label class="toggle"><input id="allowNegative" type="checkbox"><span>Allow negative subtraction answers</span></label>
+        <label class="toggle"><input id="allowRemainders" type="checkbox"><span>Allow division remainders</span></label>
+        <label class="toggle"><input id="includeAnswerKey" type="checkbox"><span>Include an answer key on page 2</span></label>
+      </fieldset>
+
+      <div class="error" id="errorBox"></div>
+      <div class="actions">
+        <button class="generate" id="generateBtn" type="button">Generate Worksheet</button>
+        <button class="print" id="printBtn" type="button">Print / Save as PDF</button>
+      </div>
+    </div>
+  </aside>
+
+  <section class="panel">
+    <div class="preview-head"><strong>Worksheet Preview</strong><span class="status" id="status">Choose options</span></div>
+    <div class="preview-wrap">
+      <div class="placeholder" id="placeholder"><div><b>Your math worksheet will appear here.</b>Select at least one operation, set your number ranges, and click Generate Worksheet.</div></div>
+      <iframe id="previewFrame" title="Math worksheet preview"></iframe>
+    </div>
+  </section>
+
+  <!-- AD PLACEMENT MOCKUP -->
+  <div style="grid-column:1 / -1;">
+    <div style="font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--mid);opacity:0.55;margin-bottom:6px;text-align:center;">Advertisement</div>
+    <div style="background:white;border:1px dashed var(--border);border-radius:10px;min-height:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:1.1rem;">
+      <div style="font-size:12px;color:var(--mid);line-height:1.6;">
+        <strong style="color:var(--walnut);">[ Ad placement mockup ]</strong><br>
+        A horizontal banner here would sit below the worksheet preview — visible once someone has finished building and is ready to print or download.
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div><a class="site-footer-logo" href="index.html"><img src="logo-header.png" alt="Down the Hall Resources"></a><p class="site-footer-tagline">Free, practical worksheets supporting learning, everyday skills, and greater independence.</p></div>
+    <div><h2>Explore</h2><div class="site-footer-links"><a href="resources/life-skills-worksheets.html">Life Skills Worksheets</a><a href="resources/math-number-worksheets.html">Math &amp; Number Worksheets</a><a href="resources/reading-language-worksheets.html">Reading &amp; Language</a><a href="resources/social-emotional-worksheets.html">Social &amp; Emotional Skills</a><a href="resources/coloring-pages.html">Coloring Pages</a></div></div>
+    <div><h2>Tools &amp; Information</h2><div class="site-footer-links"><a href="generator.html">Worksheet Generator</a><a href="math-generator.html">Math Worksheet Generator</a><a href="mailto:hello@downthehallresources.com">Contact Us</a><a href="legal.html">Terms &amp; Privacy</a></div></div>
+  </div>
+  <div class="site-footer-bottom">&copy; 2026 Down the Hall Resources. Free to print and use according to our terms.</div>
+</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+let worksheetHtml = '';
+
+function integerValue(id) {
+  const value = Number($(id).value);
+  return Number.isFinite(value) ? Math.trunc(value) : NaN;
+}
+function randomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+function shuffle(items) {
+  for (let i = items.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [items[i], items[j]] = [items[j], items[i]];
+  }
+  return items;
+}
+function selectedOperations() {
+  return [...document.querySelectorAll('.operation input:checked')].map(input => input.value);
+}
+function validate() {
+  const operations = selectedOperations();
+  const firstMin = integerValue('firstMin');
+  const firstMax = integerValue('firstMax');
+  const secondMin = integerValue('secondMin');
+  const secondMax = integerValue('secondMax');
+  if (!operations.length) return 'Choose at least one operation.';
+  if ([firstMin, firstMax, secondMin, secondMax].some(Number.isNaN)) return 'Enter whole numbers in every range field.';
+  if (firstMin > firstMax || secondMin > secondMax) return 'Each minimum must be less than or equal to its maximum.';
+  if (operations.includes('divide') && secondMin <= 0 && !$('allowRemainders').checked) return 'For whole-number division, set the second-number minimum to 1 or higher.';
+  if (Math.abs(firstMin) > 999 || Math.abs(firstMax) > 999 || Math.abs(secondMin) > 999 || Math.abs(secondMax) > 999) return 'Use numbers between -999 and 999 so the worksheet stays readable.';
+  return '';
+}
+function makeProblem(operation, ranges) {
+  let a = randomInt(ranges.firstMin, ranges.firstMax);
+  let b = randomInt(ranges.secondMin, ranges.secondMax);
+  if (operation === 'add') return { text: a + ' + ' + b, answer: a + b };
+  if (operation === 'subtract') {
+    if (!$('allowNegative').checked && a < b) [a, b] = [b, a];
+    return { text: a + ' − ' + b, answer: a - b };
+  }
+  if (operation === 'multiply') return { text: a + ' × ' + b, answer: a * b };
+  if (!$('allowRemainders').checked) {
+    const divisor = b === 0 ? 1 : Math.abs(b);
+    const quotient = a;
+    const dividend = divisor * quotient;
+    return { text: dividend + ' ÷ ' + divisor, answer: quotient };
+  }
+  const divisor = b === 0 ? 1 : Math.abs(b);
+  const dividend = a;
+  const quotient = Math.trunc(dividend / divisor);
+  const remainder = Math.abs(dividend % divisor);
+  return { text: dividend + ' ÷ ' + divisor, answer: quotient + (remainder ? ' R' + remainder : '') };
+}
+function generateProblems(count, operations, ranges) {
+  const results = [];
+  const used = new Set();
+  let attempts = 0;
+  while (results.length < count && attempts < count * 80) {
+    const operation = operations[results.length % operations.length];
+    const problem = makeProblem(operation, ranges);
+    const key = problem.text;
+    if (!used.has(key)) {
+      used.add(key);
+      results.push(problem);
+    }
+    attempts++;
+  }
+  while (results.length < count) {
+    results.push(makeProblem(operations[results.length % operations.length], ranges));
+  }
+  return shuffle(results);
+}
+function pageMarkup(problems, title, columns, answerKey) {
+  const rows = Math.ceil(problems.length / columns);
+  const content = problems.map((problem, index) => {
+    const response = answerKey ? '<span class="answer-key">' + problem.answer + '</span>' : '<span class="answer-line"></span>';
+    return '<div class="problem"><span class="problem-number">' + (index + 1) + '.</span><strong>' + problem.text + ' =</strong>' + response + '</div>';
+  }).join('');
+  return '<section class="sheet columns-' + columns + '">' +
+    '<header><div class="brand-row"><span>Down the Hall Resources</span><span>Math & Numbers</span></div>' +
+    '<h1>' + escapeHtml(title + (answerKey ? ' — Answer Key' : '')) + '</h1>' +
+    (answerKey ? '' : '<div class="meta"><div>Name:<span></span></div><div>Date:<span></span></div></div>') +
+    '</header><main class="problem-grid" style="grid-template-columns:repeat(' + columns + ',1fr);grid-template-rows:repeat(' + rows + ',1fr);">' + content + '</main>' +
+    '<footer><span>Down the Hall Resources</span><span>downthehallresources.com · Free to print and use</span></footer></section>';
+}
+function escapeHtml(value) {
+  return String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[char]));
+}
+function buildDocument(problems, title, columns, includeAnswerKey) {
+  return '<!doctype html><html><head><meta charset="utf-8"><title>' + escapeHtml(title) + '</title><style>' +
+    '@page{size:Letter;margin:0}*{box-sizing:border-box}html,body{margin:0;background:#e8e3dc;font-family:Georgia,\"Times New Roman\",serif;color:#3b2f23}' +
+    '.sheet{width:8.5in;height:11in;margin:0 auto;background:white;padding:.63in .82in .32in;display:flex;flex-direction:column;page-break-after:always;overflow:hidden}' +
+    '.sheet:last-child{page-break-after:auto}.brand-row{display:flex;justify-content:space-between;font:700 8px Arial,sans-serif;letter-spacing:.11em;text-transform:uppercase;color:#6B5E58;margin-bottom:9px}' +
+    'h1{text-align:center;font-size:30px;line-height:1.1;margin:0}.meta{display:grid;grid-template-columns:1fr 1fr;gap:.35in;margin-top:.55in;margin-bottom:.32in;font:10px Arial,sans-serif;text-transform:uppercase;letter-spacing:.08em}' +
+    '.meta div{display:flex;gap:8px;align-items:flex-end}.meta span{flex:1;border-bottom:1.5px solid #C4622D;height:18px}' +
+    '.problem-grid{flex:1;border:1px dashed #E6D7CC;border-radius:11px;padding:.35in .34in;display:grid;grid-auto-flow:column;column-gap:.45in}' +
+    '.problem{display:grid;grid-template-columns:.36in minmax(0,1fr) .75in;align-items:center;min-width:0;font-size:24px;white-space:nowrap}' +
+    '.problem-number{text-align:right;padding-right:7px;font-weight:400}.answer-line{width:.72in;border-bottom:2px solid #191919;transform:translateY(7px)}.answer-key{font-weight:700;border-bottom:1px solid #C4622D;text-align:center;padding:0 4px}' +
+    '.columns-3 .problem-grid{padding:.3in .22in;column-gap:.22in}.columns-3 .problem{grid-template-columns:.3in minmax(0,1fr) .5in;column-gap:3px;font-size:18px}.columns-3 .problem-number{padding-right:4px}.columns-3 .answer-line{width:.47in}.columns-3 .answer-key{padding:0 2px}' +
+    '.columns-4 .problem-grid{padding:.28in .14in;column-gap:.1in}.columns-4 .problem{grid-template-columns:.28in minmax(0,1fr) .35in;column-gap:2px;font-size:14px}.columns-4 .problem-number{padding-right:4px;font-size:11px}.columns-4 .answer-line{width:.32in;border-bottom-width:1.5px}.columns-4 .answer-key{padding:0 1px;font-size:13px}' +
+    'footer{margin-top:.1in;padding-top:.08in;border-top:1px solid #E7DDD5;display:flex;justify-content:space-between;color:#685D55;font-size:8px}footer span:last-child{font-family:Arial,sans-serif;text-transform:uppercase;letter-spacing:.04em}' +
+    '@media screen{body{padding:4px}.sheet{box-shadow:0 2px 12px rgba(0,0,0,.12);margin-bottom:18px;transform-origin:top left}}@media print{body{background:white!important;padding:0!important;width:auto!important}.sheet{box-shadow:none!important;margin:0!important;transform:none!important}}' +
+    '</style></head><body>' + pageMarkup(problems,title,columns,false) + (includeAnswerKey ? pageMarkup(problems,title,columns,true) : '') +
+    '<script>function fitPreview(){if(matchMedia(\"print\").matches)return;const naturalWidth=816,naturalHeight=1056;const scale=Math.min(1,(document.documentElement.clientWidth-8)/naturalWidth);document.body.style.width=(naturalWidth*scale+8)+\"px\";document.querySelectorAll(\".sheet\").forEach(sheet=>{sheet.style.transform=\"scale(\"+scale+\")\";sheet.style.marginBottom=(-naturalHeight*(1-scale)+18)+\"px\";});}addEventListener(\"load\",fitPreview);addEventListener(\"resize\",fitPreview);addEventListener(\"beforeprint\",()=>document.querySelectorAll(\".sheet\").forEach(sheet=>{sheet.style.transform=\"none\";sheet.style.marginBottom=\"0\";}));addEventListener(\"afterprint\",fitPreview);<\/script></body></html>';
+}
+function generateWorksheet(userInitiated) {
+  const error = validate();
+  if (error) {
+    $('errorBox').textContent = error;
+    $('errorBox').style.display = 'block';
+    return;
+  }
+  $('errorBox').style.display = 'none';
+  const ranges = { firstMin:integerValue('firstMin'), firstMax:integerValue('firstMax'), secondMin:integerValue('secondMin'), secondMax:integerValue('secondMax') };
+  const count = integerValue('problemCount');
+  const columns = integerValue('columnCount');
+  const title = $('worksheetTitle').value.trim() || 'Math Practice';
+  const problems = generateProblems(count, selectedOperations(), ranges);
+  worksheetHtml = buildDocument(problems, title, columns, $('includeAnswerKey').checked);
+  $('previewFrame').srcdoc = worksheetHtml;
+  $('previewFrame').style.display = 'block';
+  $('placeholder').style.display = 'none';
+  $('status').textContent = 'Ready to print';
+  $('status').className = 'status ready';
+  $('printBtn').classList.add('visible');
+
+  if (userInitiated && typeof gtag === 'function') {
+    gtag('event', 'generate_worksheet', {
+      'event_category': 'Math Worksheet Generator',
+      'event_label': selectedOperations().join('+') || 'unknown'
+    });
+  }
+}
+function printWorksheet() {
+  const frame = $('previewFrame');
+  if (frame.contentWindow) {
+    frame.contentWindow.focus();
+    frame.contentWindow.print();
+  }
+
+  if (typeof gtag === 'function') {
+    gtag('event', 'print_worksheet', {
+      'event_category': 'Math Worksheet Generator',
+      'event_label': selectedOperations().join('+') || 'unknown'
+    });
+  }
+}
+$('generateBtn').onclick = function() { generateWorksheet(true); };
+$('printBtn').onclick = printWorksheet;
+generateWorksheet(false);
+</script>
+</body>
+</html>
