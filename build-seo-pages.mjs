@@ -77,6 +77,8 @@ const categories = {
 const subtopicFor = (resource) => {
   if (resource.href.includes("/home-safety/")) return "Home Safety";
   if (resource.href.includes("/personal-care/")) return "Personal Care";
+  if (resource.href.includes("/community/")) return "Community and Independence";
+  if (resource.href.includes("/money-skills/")) return "Money and Budget Skills";
   if (resource.href.includes("/reading-food-labels/")) return "Reading Food Labels";
   if (resource.href.includes("/healthy-eating/")) return "Healthy Eating";
   if (resource.href.includes("/tracing-practice/")) return "Tracing Practice";
