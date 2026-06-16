@@ -366,6 +366,7 @@
   .badge-worksheet { background: #FFF3E8; color: #A05C1C; }
   .badge-activity  { background: var(--sage-light); color: #2E6640; }
   .badge-visual    { background: #F0EBF8; color: #6B3FA0; }
+  .badge-guide     { background: #E8F4FB; color: #1A6FA0; }
   .badge-guide     { background: var(--slate-light); color: #2B5C80; }
   .badge-premium   { background: #2C2420; color: #E8C96A; }
   .premium-lock {
@@ -839,6 +840,11 @@
         <div class="cat-name">Social & emotional</div>
         <div class="cat-count">6 resources</div>
       </div>
+      <div class="cat-card" onclick="showPage('resources');setTimeout(function(){setFilter(document.querySelector('.filter-chip[data-filter=\'guides\']'),'guides');},80)">
+        <div class="cat-icon" style="background:#E8F4FB;">📘</div>
+        <div class="cat-name">Guides</div>
+        <div class="cat-count">12 resources</div>
+      </div>
       <div class="cat-card" onclick="showPage('resources')">
         <div class="cat-icon" style="background:#EAF5EE;">🏃</div>
         <div class="cat-name">Motor & movement</div>
@@ -878,10 +884,10 @@
       <button class="see-all" onclick="showPage('resources')">See all →</button>
     </div>
     <div class="resource-grid">
-      <a href="resources/handwashing-steps.html" data-pdf="worksheets/life-skills/personal-care/Handwashing-Steps.pdf" class="resource-card" style="text-decoration:none;color:inherit;">
+      <a href="resources/handwashing-steps.html" data-pdf="worksheets/life-skills/personal-care/Handwashing-Steps.pdf" data-type="guide" class="resource-card" style="text-decoration:none;color:inherit;">
         <div class="res-thumb"><img src="worksheets/life-skills/personal-care/Handwashing-Steps-thumb.png" alt="Handwashing Steps preview" style="width:100%;display:block;"></div>
         <div class="res-card-body">
-          <span class="res-badge badge-worksheet">Worksheet</span>
+          <span class="res-badge badge-guide">Guide</span>
           <div class="res-title">Handwashing Steps</div>
           <div class="tag-row"><span class="tag">All ages</span><span class="tag">Personal care</span><span class="tag">Life skills</span></div>
           <div class="res-meta">
@@ -956,6 +962,7 @@
     <button class="filter-chip" data-filter="math" onclick="setFilter(this,'math')">Math &amp; Numbers</button>
     <button class="filter-chip" data-filter="social-emotional" onclick="setFilter(this,'social-emotional')">Social &amp; Emotional</button>
     <button class="filter-chip" data-filter="coloring" onclick="setFilter(this,'coloring')">Coloring Pages</button>
+    <button class="filter-chip" data-filter="guides" onclick="setFilter(this,'guides')">Guides</button>
   </div>
   <div id="no-results-msg" style="display:none;text-align:center;padding:3rem 1.5rem;color:var(--warm-gray);">
     <div style="font-size:2rem;margin-bottom:0.5rem;">🔍</div>
@@ -1010,10 +1017,10 @@
         </div>
       </a>
 
-      <a href="resources/my-home-safety-rules.html" data-pdf="worksheets/life-skills/home-safety/My-Home-Safety-Rules.pdf" class="resource-card" data-filter="life-skills" style="text-decoration:none;color:inherit;">
+      <a href="resources/my-home-safety-rules.html" data-pdf="worksheets/life-skills/home-safety/My-Home-Safety-Rules.pdf" data-type="guide" class="resource-card" data-filter="life-skills" style="text-decoration:none;color:inherit;">
         <div class="res-thumb"><img src="worksheets/life-skills/home-safety/My-Home-Safety-Rules-thumb.png" alt="My Home Safety Rules preview" style="width:100%;display:block;"></div>
         <div class="res-card-body">
-          <span class="res-badge badge-worksheet">Worksheet</span>
+          <span class="res-badge badge-guide">Guide</span>
           <div class="res-title">My Home Safety Rules</div>
           <div class="tag-row"><span class="tag">All ages</span><span class="tag">Home safety</span><span class="tag">Life skills</span></div>
           <div class="res-meta"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> PDF · Free download</div>
@@ -1030,30 +1037,30 @@
         </div>
       </a>
 
-      <a href="resources/power-outage-preparedness.html" data-pdf="worksheets/life-skills/home-safety/Power-Outage-Preparedness.pdf" class="resource-card" data-filter="life-skills" style="text-decoration:none;color:inherit;">
+      <a href="resources/power-outage-preparedness.html" data-pdf="worksheets/life-skills/home-safety/Power-Outage-Preparedness.pdf" data-type="guide" class="resource-card" data-filter="life-skills" style="text-decoration:none;color:inherit;">
         <div class="res-thumb"><img src="worksheets/life-skills/home-safety/Power-Outage-Preparedness-thumb.png" alt="Power Outage Preparedness preview" style="width:100%;display:block;"></div>
         <div class="res-card-body">
-          <span class="res-badge badge-worksheet">Worksheet</span>
+          <span class="res-badge badge-guide">Guide</span>
           <div class="res-title">Power Outage Preparedness</div>
           <div class="tag-row"><span class="tag">All ages</span><span class="tag">Home safety</span><span class="tag">Life skills</span></div>
           <div class="res-meta"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> PDF · Free download</div>
         </div>
       </a>
 
-      <a href="resources/severe-weather-at-home.html" data-pdf="worksheets/life-skills/home-safety/Severe-Weather-at-Home.pdf" class="resource-card" data-filter="life-skills" style="text-decoration:none;color:inherit;">
+      <a href="resources/severe-weather-at-home.html" data-pdf="worksheets/life-skills/home-safety/Severe-Weather-at-Home.pdf" data-type="guide" class="resource-card" data-filter="life-skills" style="text-decoration:none;color:inherit;">
         <div class="res-thumb"><img src="worksheets/life-skills/home-safety/Severe-Weather-at-Home-thumb.png" alt="Severe Weather at Home preview" style="width:100%;display:block;"></div>
         <div class="res-card-body">
-          <span class="res-badge badge-worksheet">Worksheet</span>
+          <span class="res-badge badge-guide">Guide</span>
           <div class="res-title">Severe Weather at Home</div>
           <div class="tag-row"><span class="tag">All ages</span><span class="tag">Home safety</span><span class="tag">Life skills</span></div>
           <div class="res-meta"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> PDF · Free download</div>
         </div>
       </a>
 
-      <a href="resources/what-to-do-when-home-alone.html" data-pdf="worksheets/life-skills/home-safety/What-to-Do-When-Home-Alone.pdf" class="resource-card" data-filter="life-skills" style="text-decoration:none;color:inherit;">
+      <a href="resources/what-to-do-when-home-alone.html" data-pdf="worksheets/life-skills/home-safety/What-to-Do-When-Home-Alone.pdf" data-type="guide" class="resource-card" data-filter="life-skills" style="text-decoration:none;color:inherit;">
         <div class="res-thumb"><img src="worksheets/life-skills/home-safety/What-to-Do-When-Home-Alone-thumb.png" alt="What to Do When Home Alone preview" style="width:100%;display:block;"></div>
         <div class="res-card-body">
-          <span class="res-badge badge-worksheet">Worksheet</span>
+          <span class="res-badge badge-guide">Guide</span>
           <div class="res-title">What to Do When Home Alone</div>
           <div class="tag-row"><span class="tag">Teens</span><span class="tag">Adults</span><span class="tag">Home safety</span></div>
           <div class="res-meta"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> PDF · Free download</div>
@@ -1076,30 +1083,30 @@
     <div style="font-size:0.72rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:var(--warm-gray);margin-bottom:0.6rem;padding-left:2px;" data-section="life-skills">🧴 Personal Care</div>
     <div class="resource-grid" style="margin-bottom:1.5rem;">
 
-      <a href="resources/brushing-teeth-correctly.html" data-pdf="worksheets/life-skills/personal-care/Brushing-Teeth-Correctly.pdf" class="resource-card" data-filter="life-skills" style="text-decoration:none;color:inherit;">
+      <a href="resources/brushing-teeth-correctly.html" data-pdf="worksheets/life-skills/personal-care/Brushing-Teeth-Correctly.pdf" data-type="guide" class="resource-card" data-filter="life-skills" style="text-decoration:none;color:inherit;">
         <div class="res-thumb"><img src="worksheets/life-skills/personal-care/Brushing-Teeth-Correctly-thumb.png" alt="Brushing Teeth Correctly preview" style="width:100%;display:block;"></div>
         <div class="res-card-body">
-          <span class="res-badge badge-worksheet">Worksheet</span>
+          <span class="res-badge badge-guide">Guide</span>
           <div class="res-title">Brushing Teeth Correctly</div>
           <div class="tag-row"><span class="tag">All ages</span><span class="tag">Personal care</span><span class="tag">Life skills</span></div>
           <div class="res-meta"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> PDF · Free download</div>
         </div>
       </a>
 
-      <a href="resources/handwashing-steps.html" data-pdf="worksheets/life-skills/personal-care/Handwashing-Steps.pdf" class="resource-card" data-filter="life-skills" style="text-decoration:none;color:inherit;">
+      <a href="resources/handwashing-steps.html" data-pdf="worksheets/life-skills/personal-care/Handwashing-Steps.pdf" data-type="guide" class="resource-card" data-filter="life-skills" style="text-decoration:none;color:inherit;">
         <div class="res-thumb"><img src="worksheets/life-skills/personal-care/Handwashing-Steps-thumb.png" alt="Handwashing Steps preview" style="width:100%;display:block;"></div>
         <div class="res-card-body">
-          <span class="res-badge badge-worksheet">Worksheet</span>
+          <span class="res-badge badge-guide">Guide</span>
           <div class="res-title">Handwashing Steps</div>
           <div class="tag-row"><span class="tag">All ages</span><span class="tag">Personal care</span><span class="tag">Life skills</span></div>
           <div class="res-meta"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> PDF · Free download</div>
         </div>
       </a>
 
-      <a href="resources/showering-and-bathing-routine.html" data-pdf="worksheets/life-skills/personal-care/Showering-and-Bathing-Routine.pdf" class="resource-card" data-filter="life-skills" style="text-decoration:none;color:inherit;">
+      <a href="resources/showering-and-bathing-routine.html" data-pdf="worksheets/life-skills/personal-care/Showering-and-Bathing-Routine.pdf" data-type="guide" class="resource-card" data-filter="life-skills" style="text-decoration:none;color:inherit;">
         <div class="res-thumb"><img src="worksheets/life-skills/personal-care/Showering-and-Bathing-Routine-thumb.png" alt="Showering and Bathing Routine preview" style="width:100%;display:block;"></div>
         <div class="res-card-body">
-          <span class="res-badge badge-worksheet">Worksheet</span>
+          <span class="res-badge badge-guide">Guide</span>
           <div class="res-title">Showering and Bathing Routine</div>
           <div class="tag-row"><span class="tag">Teens</span><span class="tag">Adults</span><span class="tag">Personal care</span></div>
           <div class="res-meta"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> PDF · Free download</div>
@@ -1116,20 +1123,20 @@
         </div>
       </a>
 
-      <a href="resources/when-to-see-a-doctor-or-dentist.html" data-pdf="worksheets/life-skills/personal-care/When-to-See-a-Doctor-or-Dentist.pdf" class="resource-card" data-filter="life-skills" style="text-decoration:none;color:inherit;">
+      <a href="resources/when-to-see-a-doctor-or-dentist.html" data-pdf="worksheets/life-skills/personal-care/When-to-See-a-Doctor-or-Dentist.pdf" data-type="guide" class="resource-card" data-filter="life-skills" style="text-decoration:none;color:inherit;">
         <div class="res-thumb"><img src="worksheets/life-skills/personal-care/When-to-See-a-Doctor-or-Dentist-thumb.png" alt="When to See a Doctor or Dentist preview" style="width:100%;display:block;"></div>
         <div class="res-card-body">
-          <span class="res-badge badge-worksheet">Worksheet</span>
+          <span class="res-badge badge-guide">Guide</span>
           <div class="res-title">When to See a Doctor or Dentist</div>
           <div class="tag-row"><span class="tag">All ages</span><span class="tag">Health</span><span class="tag">Personal care</span></div>
           <div class="res-meta"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> PDF · Free download</div>
         </div>
       </a>
 
-      <a href="resources/morning-routine-check.html" data-pdf="worksheets/life-skills/personal-care/Morning-Routine-Check.pdf" class="resource-card" data-filter="life-skills" style="text-decoration:none;color:inherit;">
+      <a href="resources/morning-routine-check.html" data-pdf="worksheets/life-skills/personal-care/Morning-Routine-Check.pdf" data-type="guide" class="resource-card" data-filter="life-skills" style="text-decoration:none;color:inherit;">
         <div class="res-thumb"><img src="worksheets/life-skills/personal-care/Morning-Routine-Check-thumb.png" alt="Morning Routine Check preview" style="width:100%;display:block;"></div>
         <div class="res-card-body">
-          <span class="res-badge badge-worksheet">Worksheet</span>
+          <span class="res-badge badge-guide">Guide</span>
           <div class="res-title">Morning Routine Check</div>
           <div class="tag-row"><span class="tag">All ages</span><span class="tag">Daily living</span><span class="tag">Sequencing</span></div>
           <div class="res-meta">PDF &middot; Answer key optional &middot; Free download</div>
@@ -1367,20 +1374,20 @@
         </div>
       </a>
 
-      <a href="resources/follow-workplace-directions.html" data-pdf="worksheets/life-skills/community/Follow-Workplace-Directions.pdf" class="resource-card" data-filter="life-skills" style="text-decoration:none;color:inherit;">
+      <a href="resources/follow-workplace-directions.html" data-pdf="worksheets/life-skills/community/Follow-Workplace-Directions.pdf" data-type="guide" class="resource-card" data-filter="life-skills" style="text-decoration:none;color:inherit;">
         <div class="res-thumb"><img src="worksheets/life-skills/community/Follow-Workplace-Directions-thumb.png" alt="Follow Workplace Directions preview" style="width:100%;display:block;"></div>
         <div class="res-card-body">
-          <span class="res-badge badge-worksheet">Worksheet</span>
+          <span class="res-badge badge-guide">Guide</span>
           <div class="res-title">Follow Workplace Directions</div>
           <div class="tag-row"><span class="tag">Teens</span><span class="tag">Adults</span><span class="tag">Work readiness</span></div>
           <div class="res-meta">PDF &middot; Answer key optional &middot; Free download</div>
         </div>
       </a>
 
-      <a href="resources/simple-meal-sequence.html" data-pdf="worksheets/life-skills/community/Simple-Meal-Sequence.pdf" class="resource-card" data-filter="life-skills" style="text-decoration:none;color:inherit;">
+      <a href="resources/simple-meal-sequence.html" data-pdf="worksheets/life-skills/community/Simple-Meal-Sequence.pdf" data-type="guide" class="resource-card" data-filter="life-skills" style="text-decoration:none;color:inherit;">
         <div class="res-thumb"><img src="worksheets/life-skills/community/Simple-Meal-Sequence-thumb.png" alt="Simple Meal Sequence preview" style="width:100%;display:block;"></div>
         <div class="res-card-body">
-          <span class="res-badge badge-worksheet">Worksheet</span>
+          <span class="res-badge badge-guide">Guide</span>
           <div class="res-title">Simple Meal Sequence</div>
           <div class="tag-row"><span class="tag">All ages</span><span class="tag">Cooking</span><span class="tag">Sequencing</span></div>
           <div class="res-meta">PDF &middot; Answer key optional &middot; Free download</div>
@@ -1820,10 +1827,10 @@
         </div>
       </a>
 
-      <a href="resources/calming-strategies.html" data-pdf="worksheets/social-emotional/Calming-Strategies.pdf" class="resource-card" data-filter="social-emotional" style="text-decoration:none;color:inherit;">
+      <a href="resources/calming-strategies.html" data-pdf="worksheets/social-emotional/Calming-Strategies.pdf" data-type="guide" class="resource-card" data-filter="social-emotional" style="text-decoration:none;color:inherit;">
         <div class="res-thumb"><img src="worksheets/social-emotional/Calming-Strategies-thumb.png" alt="Calming Strategies worksheet preview" style="width:100%;display:block;"></div>
         <div class="res-card-body">
-          <span class="res-badge badge-worksheet">Worksheet</span>
+          <span class="res-badge badge-guide">Guide</span>
           <div class="res-title">Choose a Calming Strategy</div>
           <div class="tag-row"><span class="tag">Coping skills</span><span class="tag">Self-regulation</span><span class="tag">Visual support</span></div>
           <div class="res-meta">PDF &middot; Answer key optional &middot; Free download</div>
@@ -2103,7 +2110,8 @@ function applyFilters() {
   // Show/hide resource cards based on BOTH the active category filter and the search text
   document.querySelectorAll('.resource-card').forEach(function(card) {
     var cardFilter = (card.getAttribute('data-filter') || '').split(' ');
-    var matchesFilter = (currentFilter === 'all') || cardFilter.indexOf(currentFilter) !== -1;
+    var matchesFilter = (currentFilter === 'all') ||
+      (currentFilter === 'guides' ? card.getAttribute('data-type') === 'guide' : cardFilter.indexOf(currentFilter) !== -1);
 
     var matchesSearch = true;
     if (currentSearch) {
@@ -2119,11 +2127,12 @@ function applyFilters() {
     if (visible) anyVisible = true;
   });
 
-  // Show/hide section headers and sub-labels (only meaningful when not searching —
-  // while searching, keep them visible so matched cards have context, but hide if their whole section is empty)
+  // Show/hide section headers and sub-labels
   document.querySelectorAll('[data-section]').forEach(function(el) {
     var sections = (el.getAttribute('data-section') || '').split(' ');
-    var matchesFilter = (currentFilter === 'all') || sections.indexOf(currentFilter) !== -1;
+    // For guides filter, show all section headers initially — the second pass below
+    // will hide any that end up with no visible cards
+    var matchesFilter = (currentFilter === 'all') || (currentFilter === 'guides') || sections.indexOf(currentFilter) !== -1;
     el.style.display = matchesFilter ? '' : 'none';
   });
 
