@@ -3,7 +3,7 @@ import path from "node:path";
 
 const root = process.cwd();
 const siteUrl = "https://downthehallresources.com";
-const today = "2026-06-14";
+const today = "2026-06-18";
 const sourcePath = path.join(root, "index.html");
 const outputDir = path.join(root, "resources");
 
@@ -74,11 +74,136 @@ const categories = {
   },
 };
 
+const topicPages = [
+  {
+    slug: "life-skills-worksheets-for-adults-with-developmental-disabilities",
+    title: "Free Life Skills Worksheets for Adults with Developmental Disabilities",
+    description:
+      "Free printable life skills worksheets for adults with developmental disabilities, including personal care, home safety, money skills, healthy eating, and functional reading.",
+    eyebrow: "Most requested collection",
+    intro:
+      "These printable life skills worksheets are designed for adults and transition-age learners who benefit from clear directions, visual supports, practical examples, and flexible staff support. They work well in day programs, group homes, community centers, special education transition programs, and home routines.",
+    audience:
+      "Use these activities for one-to-one support, small groups, skill review, morning meetings, independent practice, or take-home reinforcement.",
+    keywords: ["life skills", "developmental disabilities", "adult day program", "group home", "independence"],
+    matches: (resource) =>
+      resource.filter === "life-skills" ||
+      resource.filter === "math" ||
+      subtopicFor(resource) === "Functional Reading" ||
+      subtopicFor(resource) === "Social and Emotional Learning",
+  },
+  {
+    slug: "money-skills-worksheets",
+    title: "Free Money Skills Worksheets",
+    description:
+      "Free printable money skills worksheets for counting coins, counting bills, budgeting, coupons, comparing prices, and making change.",
+    eyebrow: "Functional math",
+    intro:
+      "Money skills are easier to practice when the activity feels connected to real shopping, budgeting, and community routines. These worksheets help learners practice counting coins and bills, reading prices, comparing costs, using coupons, and building confidence with everyday money decisions.",
+    audience:
+      "Best for supported math practice, community-based instruction preparation, vocational programs, and daily living skills groups.",
+    keywords: ["money", "coins", "bills", "budget", "prices", "coupon", "change"],
+    matches: (resource) =>
+      /money|coin|bill|budget|coupon|price|change|\$/i.test(
+        `${resource.title} ${resource.href} ${resource.tags.join(" ")}`,
+      ),
+  },
+  {
+    slug: "personal-hygiene-worksheets",
+    title: "Free Personal Hygiene and Self-Care Worksheets",
+    description:
+      "Free printable personal hygiene and self-care worksheets covering handwashing, brushing teeth, bathing, clothing choices, and doctor or dentist visits.",
+    eyebrow: "Personal care routines",
+    intro:
+      "Personal hygiene worksheets can help turn daily care routines into smaller, teachable steps. These resources use plain language, familiar routines, and visual structure so staff and caregivers can review what to do, when to do it, and why it matters.",
+    audience:
+      "Use these pages during routine teaching, pre-teaching before a task, health lessons, or individualized support planning.",
+    keywords: ["personal care", "hygiene", "handwashing", "teeth", "showering", "doctor", "dentist", "clothing"],
+    matches: (resource) =>
+      subtopicFor(resource) === "Personal Care" ||
+      /hygiene|handwashing|teeth|tooth|shower|bathing|clothing|doctor|dentist|personal care/i.test(
+        `${resource.title} ${resource.href} ${resource.tags.join(" ")}`,
+      ),
+  },
+  {
+    slug: "home-safety-worksheets",
+    title: "Free Home Safety Worksheets",
+    description:
+      "Free printable home safety worksheets covering emergencies, fire hazards, answering the door, phone scams, severe weather, and being home alone.",
+    eyebrow: "Safety and independence",
+    intro:
+      "Home safety skills need repetition, conversation, and practice with real situations. These worksheets help learners talk through emergencies, safer choices, warning signs, household hazards, and who to contact when something does not feel safe.",
+    audience:
+      "Good for group lessons, safety reviews, transition planning, residential support, and family practice.",
+    keywords: ["home safety", "emergency", "fire", "door", "phone scam", "weather", "home alone"],
+    matches: (resource) =>
+      subtopicFor(resource) === "Home Safety" ||
+      /safety|emergency|fire|door|scam|weather|home alone|hazard/i.test(
+        `${resource.title} ${resource.href} ${resource.tags.join(" ")}`,
+      ),
+  },
+  {
+    slug: "social-skills-worksheets",
+    title: "Free Social Skills and Emotional Skills Worksheets",
+    description:
+      "Free printable social skills worksheets for emotions, friendship, self-advocacy, calming strategies, social situations, texting, email, and boundaries.",
+    eyebrow: "Social and emotional learning",
+    intro:
+      "Social and emotional skills are often best taught through concrete examples, short scenarios, and guided discussion. These worksheets give staff and caregivers a starting point for practicing feelings, communication, boundaries, friendship, self-advocacy, and safe choices.",
+    audience:
+      "Use them for small groups, role-play, counseling support, daily check-ins, or direct instruction.",
+    keywords: ["social", "emotional", "feelings", "friendship", "self-advocacy", "boundaries", "calming"],
+    matches: (resource) =>
+      resource.filter === "social-emotional" ||
+      /emotion|calming|friend|social|advocacy|text|email|safety|boundary/i.test(
+        `${resource.title} ${resource.href} ${resource.tags.join(" ")}`,
+      ),
+  },
+  {
+    slug: "functional-reading-worksheets",
+    title: "Free Functional Reading Worksheets",
+    description:
+      "Free printable functional reading worksheets for menus, schedules, appointment cards, signs, food labels, prescriptions, pay stubs, and everyday documents.",
+    eyebrow: "Everyday reading practice",
+    intro:
+      "Functional reading worksheets help learners practice the kinds of text they actually see in daily life. These resources focus on menus, schedules, signs, forms, labels, appointment cards, and short practical passages.",
+    audience:
+      "Use these worksheets for transition programs, adult day services, community access preparation, and reading comprehension practice.",
+    keywords: ["functional reading", "menu", "schedule", "signs", "labels", "appointment", "prescription", "pay stub"],
+    matches: (resource) =>
+      subtopicFor(resource) === "Functional Reading" ||
+      subtopicFor(resource) === "Reading Food Labels" ||
+      /read|reading|menu|schedule|sign|label|appointment|prescription|boarding|pay stub|sentence/i.test(
+        `${resource.title} ${resource.href} ${resource.tags.join(" ")}`,
+      ),
+  },
+  {
+    slug: "healthy-eating-worksheets",
+    title: "Free Healthy Eating and Wellness Worksheets",
+    description:
+      "Free printable healthy eating and wellness worksheets covering food groups, healthy choices, nutrition facts, food labels, wellness vocabulary, and meal planning.",
+    eyebrow: "Health and wellness",
+    intro:
+      "Healthy eating and wellness lessons work best when learners can connect the activity to foods, routines, and choices they already know. These worksheets support conversations about food groups, nutrition labels, meal choices, wellness words, and everyday health habits.",
+    audience:
+      "Use them for health lessons, cooking groups, grocery planning, wellness activities, or supported independent living practice.",
+    keywords: ["healthy eating", "wellness", "food groups", "nutrition", "food labels", "meal", "health"],
+    matches: (resource) =>
+      subtopicFor(resource) === "Healthy Eating" ||
+      subtopicFor(resource) === "Reading Food Labels" ||
+      subtopicFor(resource) === "Health and Wellness Vocabulary" ||
+      /healthy|food|nutrition|wellness|meal|label|doctor|dentist/i.test(
+        `${resource.title} ${resource.href} ${resource.tags.join(" ")}`,
+      ),
+  },
+];
+
 const subtopicFor = (resource) => {
   if (resource.href.includes("/home-safety/")) return "Home Safety";
   if (resource.href.includes("/personal-care/")) return "Personal Care";
   if (resource.href.includes("/community/")) return "Community and Independence";
   if (resource.href.includes("/money-skills/")) return "Money and Budget Skills";
+  if (resource.href.includes("/functional-reading/")) return "Functional Reading";
   if (resource.href.includes("/reading-food-labels/")) return "Reading Food Labels";
   if (resource.href.includes("/healthy-eating/")) return "Healthy Eating";
   if (resource.href.includes("/tracing-practice/")) return "Tracing Practice";
@@ -513,6 +638,106 @@ ${footer}
 </html>`;
 };
 
+const topicPage = (topic, resources) => {
+  const canonical = `${siteUrl}/resources/${topic.slug}.html`;
+  const selected = resources
+    .filter(topic.matches)
+    .sort((a, b) => {
+      const aTitle = a.title.toLowerCase();
+      const bTitle = b.title.toLowerCase();
+      const aScore = topic.keywords.some((word) => aTitle.includes(word)) ? 0 : 1;
+      const bScore = topic.keywords.some((word) => bTitle.includes(word)) ? 0 : 1;
+      return aScore - bScore || a.title.localeCompare(b.title);
+    });
+  const shown = selected.slice(0, 24);
+  const primaryCategories = [
+    ...new Set(
+      shown
+        .map((resource) => resource.filter)
+        .filter((filter) => categories[filter])
+        .map((filter) => categories[filter]),
+    ),
+  ].slice(0, 4);
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: topic.title,
+    description: topic.description,
+    url: canonical,
+    isPartOf: { "@type": "WebSite", name: "Down the Hall Resources", url: `${siteUrl}/` },
+    about: topic.keywords,
+  };
+
+  return `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+${headScripts}
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>${escapeHtml(topic.title)} | Down the Hall Resources</title>
+<meta name="description" content="${escapeHtml(topic.description)}">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="${canonical}">
+<link rel="icon" type="image/png" href="../logo-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Down the Hall Resources">
+<meta property="og:title" content="${escapeHtml(topic.title)}">
+<meta property="og:description" content="${escapeHtml(topic.description)}">
+<meta property="og:url" content="${canonical}">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">${JSON.stringify(schema)}</script>
+<style>${styles}</style>
+</head>
+<body>
+${cookieBanner}
+${header}
+<main class="wrap">
+  <div class="crumbs"><a href="../index.html">Home</a> / Topic Collection</div>
+  <section class="category-hero">
+    <div class="eyebrow">${escapeHtml(topic.eyebrow)}</div>
+    <h1>${escapeHtml(topic.title)}</h1>
+    <p>${escapeHtml(topic.intro)}</p>
+    <p>${escapeHtml(topic.audience)}</p>
+  </section>
+
+  <div class="content">
+    <h2>How to use these worksheets</h2>
+    <p>Start with one worksheet that matches the learner's current routine or goal. Read the directions together, model one example, and allow supports such as verbal choices, pointing, writing assistance, real objects, or fewer questions at one time.</p>
+    <ul>
+      <li>Use the same worksheet more than once if repetition helps the skill stick.</li>
+      <li>Connect the printed activity to real routines, places, objects, or conversations whenever possible.</li>
+      <li>Adjust the support level instead of assuming the worksheet is too easy or too hard.</li>
+    </ul>
+  </div>
+
+  ${adSlot}
+
+  <h2>Free printable worksheets in this topic</h2>
+  <div class="category-grid">${shown.map(resourceCard).join("")}</div>
+
+  <div class="content">
+    <h2>Related collections</h2>
+    <p>If you are building a broader lesson plan, these collections pair well with this topic.</p>
+  </div>
+  <div class="related-grid">
+    ${primaryCategories
+      .map(
+        (category) => `<a class="card" href="${category.slug}.html">
+      <div class="card-body">
+        <small>Worksheet collection</small>
+        <h3>${escapeHtml(category.title)}</h3>
+        <span>Browse ${escapeHtml(category.name.toLowerCase())}</span>
+      </div>
+    </a>`,
+      )
+      .join("")}
+  </div>
+</main>
+${footer}
+</body>
+</html>`;
+};
+
 let indexHtml = fs.readFileSync(sourcePath, "utf8");
 const resources = parseResources(indexHtml).map((resource) => ({
   ...resource,
@@ -534,6 +759,14 @@ for (const key of Object.keys(categories)) {
   fs.writeFileSync(
     path.join(outputDir, `${categories[key].slug}.html`),
     categoryPage(key, categoryResources),
+    "utf8",
+  );
+}
+
+for (const topic of topicPages) {
+  fs.writeFileSync(
+    path.join(outputDir, `${topic.slug}.html`),
+    topicPage(topic, resources),
     "utf8",
   );
 }
@@ -578,11 +811,32 @@ if (!indexHtml.includes("Explore worksheet collections")) {
   );
 }
 
+const topicLinks = `
+    <div class="section-header" style="margin-top:0.5rem;">
+      <div class="section-label">Popular worksheet topics</div>
+    </div>
+    <div class="cat-grid" style="margin-bottom:2rem;">
+      ${topicPages
+        .map(
+          (topic) => `<a class="cat-card" href="resources/${topic.slug}.html" style="text-decoration:none;color:inherit;">
+        <div class="cat-name">${escapeHtml(topic.title.replace(/^Free /, ""))}</div>
+        <div class="cat-count">Topic landing page</div>
+      </a>`,
+        )
+        .join("\n")}
+    </div>
+`;
+
+if (!indexHtml.includes("Popular worksheet topics")) {
+  indexHtml = indexHtml.replace(categoryLinks, `${categoryLinks}\n${topicLinks}`);
+}
+
 fs.writeFileSync(sourcePath, indexHtml, "utf8");
 
 const staticUrls = ["/", "/generator.html", "/math-generator.html", "/legal.html"];
 const generatedUrls = [
   ...Object.values(categories).map((category) => `/resources/${category.slug}.html`),
+  ...topicPages.map((topic) => `/resources/${topic.slug}.html`),
   ...resources.map((resource) => `/resources/${resource.slug}.html`),
 ];
 const sitemapEntries = [...staticUrls, ...generatedUrls]
@@ -600,4 +854,6 @@ fs.writeFileSync(
   "utf8",
 );
 
-console.log(`Generated ${resources.length} worksheet pages and ${Object.keys(categories).length} category pages.`);
+console.log(
+  `Generated ${resources.length} worksheet pages, ${Object.keys(categories).length} category pages, and ${topicPages.length} topic pages.`,
+);
