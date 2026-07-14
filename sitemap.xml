@@ -1,477 +1,982 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://downthehallresources.com/</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/generator.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/math-generator.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+  </url>
+
+  <url>
+    <loc>https://downthehallresources.com/about.html</loc>
+    <lastmod>2026-06-20</lastmod>
+  </url>
+
+  <url>
+    <loc>https://downthehallresources.com/contact.html</loc>
+    <lastmod>2026-06-20</lastmod>
+  </url>
+
+  <url>
+    <loc>https://downthehallresources.com/editorial-policy.html</loc>
+    <lastmod>2026-06-20</lastmod>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/legal.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/life-skills-worksheets.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/reading-language-worksheets.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/math-number-worksheets.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/social-emotional-worksheets.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/coloring-pages.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/life-skills-worksheets-for-adults-with-developmental-disabilities.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/share-images/life-skills-worksheets-for-adults-with-developmental-disabilities-pin.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/money-skills-worksheets.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/share-images/money-skills-worksheets-pin.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/personal-hygiene-worksheets.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/share-images/personal-hygiene-worksheets-pin.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/home-safety-worksheets.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/share-images/home-safety-worksheets-pin.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/social-skills-worksheets.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/share-images/social-skills-worksheets-pin.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://downthehallresources.com/resources/community-safety-worksheets.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/share-images/community-safety-worksheets-pin.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://downthehallresources.com/resources/cooking-and-meal-prep-worksheets.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/share-images/cooking-and-meal-prep-worksheets-pin.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://downthehallresources.com/resources/job-and-vocational-skills-worksheets.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/share-images/job-and-vocational-skills-worksheets-pin.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/functional-reading-worksheets.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/share-images/functional-reading-worksheets-pin.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/healthy-eating-worksheets.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/share-images/healthy-eating-worksheets-pin.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/handwashing-steps.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/personal-care/Handwashing-Steps-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/answering-the-door-safely.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/home-safety/Answering-the-Door-Safely-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/circle-the-fire-hazards.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/home-safety/Circle-the-Fire-Hazards-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/nutrition-facts.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/healthy-eating/reading-food-labels/Nutrition-Facts-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/my-home-safety-rules.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/home-safety/My-Home-Safety-Rules-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/phone-scam-awareness.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/home-safety/Phone-Scam-Awareness-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/power-outage-preparedness.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/home-safety/Power-Outage-Preparedness-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/severe-weather-at-home.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/home-safety/Severe-Weather-at-Home-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/what-to-do-when-home-alone.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/home-safety/What-to-Do-When-Home-Alone-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/emergency-or-not.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/home-safety/Emergency-or-Not-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/brushing-teeth-correctly.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/personal-care/Brushing-Teeth-Correctly-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/showering-and-bathing-routine.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/personal-care/Showering-and-Bathing-Routine-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/choosing-weather-appropriate-clothing.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/personal-care/Choosing-Weather-Appropriate-Clothing-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/when-to-see-a-doctor-or-dentist.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/personal-care/When-to-See-a-Doctor-or-Dentist-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/morning-routine-check.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/personal-care/Morning-Routine-Check-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/laundry-day-sort.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/personal-care/Laundry-Day-Sort-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/read-a-weekly-chore-schedule.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/personal-care/Read-a-Weekly-Chore-Schedule-thumb.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://downthehallresources.com/resources/hygiene-kit-pack-and-check.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/personal-care/Hygiene-Kit-Pack-and-Check-thumb.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://downthehallresources.com/resources/first-aid-kit-choices.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/personal-care/First-Aid-Kit-Choices-thumb.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://downthehallresources.com/resources/laundry-settings-match-level-2.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/personal-care/Laundry-Settings-Match-Level-2-thumb.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://downthehallresources.com/resources/refill-reminder-calendar-level-2.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/personal-care/Refill-Reminder-Calendar-Level-2-thumb.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://downthehallresources.com/resources/bathroom-supplies-restock-checklist.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/personal-care/Bathroom-Supplies-Restock-Checklist-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/reading-food-labels-level-1.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/healthy-eating/reading-food-labels/Reading-Food-Labels-Level-1-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/reading-food-labels-level-2.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/healthy-eating/reading-food-labels/Reading-Food-Labels-Level-2-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/reading-food-labels-level-3.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/healthy-eating/reading-food-labels/Reading-Food-Labels-Level-3-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/healthy-choices-level-1.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/healthy-eating/Healthy-Choices-Level-1-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/healthy-choices-level-2.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/healthy-eating/Healthy-Choices-Level-2-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/healthy-choices-level-3.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/healthy-eating/Healthy-Choices-Level-3-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/food-groups-level-1.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/healthy-eating/Food-Groups-Level-1-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/food-groups-level-2.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/healthy-eating/Food-Groups-Level-2-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/food-groups-level-3.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/healthy-eating/Food-Groups-Level-3-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/healthy-food-path-level-1.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/healthy-eating/Healthy-Food-Path-Level-1-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/healthy-food-path-level-2.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/healthy-eating/Healthy-Food-Path-Level-2-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/healthy-food-path-level-3.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/healthy-eating/Healthy-Food-Path-Level-3-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/community-signs-match.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/community/Community-Signs-Match-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/read-a-bus-schedule.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/community/Read-a-Bus-Schedule-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/read-an-appointment-card.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/community/Read-an-Appointment-Card-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/read-a-boarding-pass.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/community/Read-a-Boarding-Pass-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/read-a-prescription-label.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/community/Read-a-Prescription-Label-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/read-a-job-posting.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/community/Read-a-Job-Posting-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/follow-workplace-directions.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/community/Follow-Workplace-Directions-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/simple-meal-sequence.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/community/Simple-Meal-Sequence-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/weather-forecast-clothing-planning.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/community/Weather-Forecast-Clothing-Planning-thumb.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://downthehallresources.com/resources/safe-rideshare-pickup-choices.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/community/Safe-Rideshare-Pickup-Choices-thumb.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://downthehallresources.com/resources/break-room-microwave-safety.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/community/Break-Room-Microwave-Safety-thumb.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://downthehallresources.com/resources/community-center-class-calendar.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/community/Community-Center-Class-Calendar-thumb.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://downthehallresources.com/resources/parking-lot-pedestrian-safety.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/community/Parking-Lot-Pedestrian-Safety-thumb.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://downthehallresources.com/resources/read-a-utility-bill-basics.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/community/Read-a-Utility-Bill-Basics-thumb.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://downthehallresources.com/resources/read-a-work-shift-schedule.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/community/Read-a-Work-Shift-Schedule-thumb.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://downthehallresources.com/resources/read-store-hours-and-plan-an-errand.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/community/Read-Store-Hours-and-Plan-an-Errand-thumb.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://downthehallresources.com/resources/crosswalk-signal-choices.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/community/Crosswalk-Signal-Choices-thumb.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://downthehallresources.com/resources/pack-for-community-class.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/community/Pack-for-Community-Class-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/compare-prices.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/money-skills/Compare-Prices-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/grocery-budget-basics.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/money-skills/Grocery-Budget-Basics-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/read-a-pay-stub-basics.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/money-skills/Read-a-Pay-Stub-Basics-thumb.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://downthehallresources.com/resources/read-a-restaurant-receipt.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/money-skills/Read-a-Restaurant-Receipt-thumb.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://downthehallresources.com/resources/compare-package-sizes-level-2.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/money-skills/Compare-Package-Sizes-Level-2-thumb.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://downthehallresources.com/resources/read-an-atm-receipt.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/money-skills/Read-an-ATM-Receipt-thumb.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://downthehallresources.com/resources/gift-card-balance-check.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/money-skills/Gift-Card-Balance-Check-thumb.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://downthehallresources.com/resources/read-a-self-checkout-screen.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/money-skills/Read-a-Self-Checkout-Screen-thumb.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://downthehallresources.com/resources/exact-cash-at-the-snack-stand.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/math-numbers/Exact-Cash-at-the-Snack-Stand-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/letter-tracing-a-to-m.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/reading-language/tracing-practice/Letter-Tracing-A-to-M-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/letter-tracing-n-to-z.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/reading-language/tracing-practice/Letter-Tracing-N-to-Z-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/number-tracing-0-to-10.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/reading-language/tracing-practice/Number-Tracing-0-to-10-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/number-tracing-11-to-20.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/reading-language/tracing-practice/Number-Tracing-11-to-20-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/healthy-habits-word-search.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/reading-language/health-wellness-word-puzzles/Healthy-Habits-Word-Search-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/wellness-word-scramble.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/reading-language/health-wellness-word-puzzles/Wellness-Word-Scramble-thumb.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://downthehallresources.com/resources/fridge-or-pantry-after-shopping.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/healthy-eating/Fridge-or-Pantry-After-Shopping-thumb.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://downthehallresources.com/resources/leftover-label-and-use-by-dates.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/life-skills/healthy-eating/Leftover-Label-and-Use-By-Dates-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/finish-the-healthy-word.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/reading-language/health-wellness-word-puzzles/Finish-the-Healthy-Word-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/read-a-menu-and-place-an-order.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/reading-language/functional-reading/Read-a-Menu-and-Place-an-Order-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/choose-the-sentence.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/reading-language/functional-reading/Choose-the-Sentence-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/complete-the-sentence.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/reading-language/functional-reading/Complete-the-Sentence-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/text-message-choices.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/reading-language/functional-reading/Text-Message-Choices-thumb.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://downthehallresources.com/resources/read-a-voicemail-and-plan-a-callback.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/reading-language/functional-reading/Read-a-Voicemail-and-Plan-a-Callback-thumb.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://downthehallresources.com/resources/library-due-date-check.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/reading-language/functional-reading/Library-Due-Date-Check-thumb.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://downthehallresources.com/resources/read-a-return-policy.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/reading-language/functional-reading/Read-a-Return-Policy-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/email-message-choices.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/reading-language/functional-reading/Email-Message-Choices-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/count-the-pictures.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/math-numbers/Count-the-Pictures-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/count-the-playground-objects.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/math-numbers/Count-the-Playground-Objects-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/counting-money-level-1.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/math-numbers/Counting-Money-Level-1-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/counting-money-level-2.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/math-numbers/Counting-Money-Level-2-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/counting-money-level-3.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/math-numbers/Counting-Money-Level-3-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/addition-1.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/math-numbers/Addition-1-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/addition-2.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/math-numbers/Addition-2-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/addition-3.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/math-numbers/Addition-3-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/subtraction-1.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/math-numbers/Subtraction-1-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/subtraction-2.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/math-numbers/Subtraction-2-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/subtraction-3.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/math-numbers/Subtraction-3-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/make-change-from-10-dollars.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/math-numbers/Make-Change-from-10-Dollars-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/use-a-coupon-and-find-the-new-price.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/math-numbers/Use-a-Coupon-and-Find-the-New-Price-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/farm-animals.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/coloring-pages/Farm-Animals-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/forest-animals.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/coloring-pages/Forest-Animals-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/ocean-animals.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/coloring-pages/Ocean-Animals-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/jungle-animals.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/coloring-pages/Jungle-Animals-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/rainforest-animals.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/coloring-pages/Rainforest-Animals-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/artic-animals.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/coloring-pages/Artic-Animals-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/crossing-the-street.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/coloring-pages/Crossing-the-Street-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/understanding-emotions.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/social-emotional/Understanding-Emotions-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/calming-strategies.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/social-emotional/Calming-Strategies-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/reading-social-situations.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/social-emotional/Reading-Social-Situations-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/friendship-skills.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/social-emotional/Friendship-Skills-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/self-advocacy.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/social-emotional/Self-Advocacy-thumb.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://downthehallresources.com/resources/public-wi-fi-safety-choices.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/social-emotional/Public-Wi-Fi-Safety-Choices-thumb.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://downthehallresources.com/resources/emotional-safety.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
+    <image:image>
+      <image:loc>https://downthehallresources.com/worksheets/social-emotional/Emotional-Safety-thumb.png</image:loc>
+    </image:image>
   </url>
 </urlset>
