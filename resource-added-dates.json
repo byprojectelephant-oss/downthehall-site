@@ -1,0 +1,614 @@
+{
+  "resources/handwashing-steps.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/answering-the-door-safely.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/circle-the-fire-hazards.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/nutrition-facts.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/my-home-safety-rules.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/phone-scam-awareness.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/power-outage-preparedness.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/severe-weather-at-home.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/what-to-do-when-home-alone.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/emergency-or-not.html": {
+    "date": "2026-06-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/pick-the-right-hygiene-item.html": {
+    "date": "2026-09-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/book-a-haircut-level-2.html": {
+    "date": "2026-09-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/follow-a-changing-room-privacy-routine.html": {
+    "date": "2026-09-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/plan-a-device-charging-routine.html": {
+    "date": "2026-09-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/store-glasses-in-their-usual-place.html": {
+    "date": "2026-09-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/brushing-teeth-correctly.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/showering-and-bathing-routine.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/choosing-weather-appropriate-clothing.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/when-to-see-a-doctor-or-dentist.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/morning-routine-check.html": {
+    "date": "2026-06-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/laundry-day-sort.html": {
+    "date": "2026-06-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/read-a-weekly-chore-schedule.html": {
+    "date": "2026-06-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/hygiene-kit-pack-and-check.html": {
+    "date": "2026-07-13",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/first-aid-kit-choices.html": {
+    "date": "2026-07-13",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/laundry-settings-match-level-2.html": {
+    "date": "2026-07-13",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/refill-reminder-calendar-level-2.html": {
+    "date": "2026-07-13",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/bathroom-supplies-restock-checklist.html": {
+    "date": "2026-07-13",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/laundromat-payment-card-steps.html": {
+    "date": "2026-08-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/medicine-storage-safety-choices.html": {
+    "date": "2026-08-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/weather-forecast-clothing-planner-level-2.html": {
+    "date": "2026-08-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/reading-food-labels-level-1.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/reading-food-labels-level-2.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/reading-food-labels-level-3.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/healthy-choices-level-1.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/healthy-choices-level-2.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/healthy-choices-level-3.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/food-groups-level-1.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/food-groups-level-2.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/food-groups-level-3.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/healthy-food-path-level-1.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/healthy-food-path-level-2.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/healthy-food-path-level-3.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/read-a-bus-detour-notice-level-2.html": {
+    "date": "2026-09-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/grocery-aisle-directory-hunt.html": {
+    "date": "2026-09-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/emergency-contact-wallet-card.html": {
+    "date": "2026-09-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/neighborhood-map-route-choices.html": {
+    "date": "2026-09-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/collect-a-lost-item.html": {
+    "date": "2026-09-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/read-a-water-refill-station-notice.html": {
+    "date": "2026-09-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/follow-a-service-desk-queue-ticket.html": {
+    "date": "2026-09-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/find-an-accessible-entrance-level-2.html": {
+    "date": "2026-09-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/use-a-coat-check-claim-ticket.html": {
+    "date": "2026-09-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/community-signs-match.html": {
+    "date": "2026-06-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/read-a-bus-schedule.html": {
+    "date": "2026-06-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/read-an-appointment-card.html": {
+    "date": "2026-06-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/read-a-boarding-pass.html": {
+    "date": "2026-06-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/read-a-prescription-label.html": {
+    "date": "2026-06-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/read-a-job-posting.html": {
+    "date": "2026-06-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/follow-workplace-directions.html": {
+    "date": "2026-06-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/simple-meal-sequence.html": {
+    "date": "2026-06-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/weather-forecast-clothing-planning.html": {
+    "date": "2026-06-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/read-a-transit-card-reload-screen.html": {
+    "date": "2026-08-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/safe-rideshare-pickup-choices.html": {
+    "date": "2026-07-13",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/break-room-microwave-safety.html": {
+    "date": "2026-07-13",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/community-center-class-calendar.html": {
+    "date": "2026-07-13",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/parking-lot-pedestrian-safety.html": {
+    "date": "2026-07-13",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/read-a-utility-bill-basics.html": {
+    "date": "2026-07-13",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/read-a-work-shift-schedule.html": {
+    "date": "2026-07-13",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/read-store-hours-and-plan-an-errand.html": {
+    "date": "2026-07-13",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/crosswalk-signal-choices.html": {
+    "date": "2026-07-13",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/pack-for-community-class.html": {
+    "date": "2026-07-13",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/which-bill-should-be-paid-first.html": {
+    "date": "2026-09-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/debit-card-balance-check-at-the-pharmacy.html": {
+    "date": "2026-09-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/split-laundry-cost-with-a-roommate.html": {
+    "date": "2026-09-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/automatic-payment-balance-plan-level-2.html": {
+    "date": "2026-09-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/check-a-reservation-deposit.html": {
+    "date": "2026-09-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/save-for-a-backpack.html": {
+    "date": "2026-09-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/choose-a-print-job-within-budget.html": {
+    "date": "2026-09-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/check-a-grocery-substitution-level-2.html": {
+    "date": "2026-09-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/compare-prices.html": {
+    "date": "2026-06-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/grocery-budget-basics.html": {
+    "date": "2026-06-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/read-a-pay-stub-basics.html": {
+    "date": "2026-06-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/read-a-restaurant-receipt.html": {
+    "date": "2026-07-13",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/compare-package-sizes-level-2.html": {
+    "date": "2026-07-13",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/read-an-atm-receipt.html": {
+    "date": "2026-07-13",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/next-dollar-up-at-the-corner-store.html": {
+    "date": "2026-08-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/compare-unit-prices-level-3.html": {
+    "date": "2026-08-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/read-a-bank-deposit-slip-basics.html": {
+    "date": "2026-08-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/gift-card-balance-check.html": {
+    "date": "2026-07-13",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/read-a-self-checkout-screen.html": {
+    "date": "2026-07-13",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/exact-cash-at-the-snack-stand.html": {
+    "date": "2026-07-13",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/letter-tracing-a-to-m.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/letter-tracing-n-to-z.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/number-tracing-0-to-10.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/number-tracing-11-to-20.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/healthy-habits-word-search.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/wellness-word-scramble.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/fridge-or-pantry-after-shopping.html": {
+    "date": "2026-07-13",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/leftover-label-and-use-by-dates.html": {
+    "date": "2026-07-13",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/finish-the-healthy-word.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/read-a-library-computer-reservation-slip.html": {
+    "date": "2026-09-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/job-application-contact-details.html": {
+    "date": "2026-09-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/pause-before-an-unexpected-qr-code-level-2.html": {
+    "date": "2026-09-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/prepare-for-a-library-card-visit.html": {
+    "date": "2026-09-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/read-a-menu-and-place-an-order.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/choose-the-sentence.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/complete-the-sentence.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/text-message-choices.html": {
+    "date": "2026-06-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/read-a-voicemail-and-plan-a-callback.html": {
+    "date": "2026-07-13",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/package-delivery-notice-plan.html": {
+    "date": "2026-08-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/cell-phone-data-warning.html": {
+    "date": "2026-08-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/library-due-date-check.html": {
+    "date": "2026-07-13",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/read-a-return-policy.html": {
+    "date": "2026-07-13",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/email-message-choices.html": {
+    "date": "2026-06-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/count-the-pictures.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/count-the-playground-objects.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/counting-money-level-1.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/counting-money-level-2.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/counting-money-level-3.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/addition-1.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/addition-2.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/addition-3.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/subtraction-1.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/subtraction-2.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/subtraction-3.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/make-change-from-10-dollars.html": {
+    "date": "2026-06-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/use-a-coupon-and-find-the-new-price.html": {
+    "date": "2026-06-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/farm-animals.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/forest-animals.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/ocean-animals.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/jungle-animals.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/rainforest-animals.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/artic-animals.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/community-garden.html": {
+    "date": "2026-09-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/visit-the-library.html": {
+    "date": "2026-09-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/farmers-market.html": {
+    "date": "2026-09-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/park-picnic.html": {
+    "date": "2026-09-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/cozy-reading-corner.html": {
+    "date": "2026-09-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/crossing-the-street.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/read-a-community-event-flyer-and-choose-a-reply.html": {
+    "date": "2026-09-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/roommate-chore-rotation-check.html": {
+    "date": "2026-09-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/ask-for-written-directions-level-2.html": {
+    "date": "2026-09-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/borrow-a-charger-and-return-it.html": {
+    "date": "2026-09-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/decline-an-invitation-level-2.html": {
+    "date": "2026-09-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/plan-a-quiet-break-and-return-level-2.html": {
+    "date": "2026-09-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/understanding-emotions.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/calming-strategies.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/reading-social-situations.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/friendship-skills.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/self-advocacy.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/public-wi-fi-safety-choices.html": {
+    "date": "2026-07-13",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/apartment-maintenance-request.html": {
+    "date": "2026-08-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/read-a-roommate-note-and-choose-a-reply.html": {
+    "date": "2026-08-15",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  },
+  "resources/emotional-safety.html": {
+    "date": "2026-06-14",
+    "source": "First addition of the resource detail page in Git history; not an independently verified deployment date."
+  }
+}

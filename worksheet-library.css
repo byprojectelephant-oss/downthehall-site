@@ -1,4 +1,6 @@
 .library-hint { max-width:760px; margin:0 0 1.4rem; color:var(--walnut); font-size:.95rem; line-height:1.7; }
+button.cat-card { font:inherit; text-align:left; color:inherit; width:100%; }
+.cat-card:focus-visible, .search-bar button:focus-visible { outline:3px solid var(--terracotta); outline-offset:3px; }
 .library-toolbar { display:flex; align-items:end; flex-wrap:wrap; gap:1rem; margin-bottom:1.5rem; padding:1.25rem; background:var(--linen-dark); border:1px solid rgba(61,46,30,.12); border-radius:12px; }
 .library-toolbar label { display:grid; gap:.5rem; font-size:.85rem; font-weight:500; }
 .library-toolbar select { min-width:250px; max-width:100%; padding:.7rem; border:1px solid rgba(61,46,30,.25); border-radius:6px; background:white; color:var(--walnut); font:inherit; }

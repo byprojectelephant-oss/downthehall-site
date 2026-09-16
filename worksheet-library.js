@@ -11,7 +11,7 @@
     ['personal', 'Personal care and routines', /personal-care|hygiene|laundry|routine|glasses|haircut|charging|chore/],
     ['food', 'Food and cooking', /healthy-eating|food|meal|nutrition|fridge|pantry|leftover|microwave/],
     ['community', 'Community and travel', /community|bus|transit|travel|boarding|rideshare|library|entrance|queue|coat-check|lost-item/],
-    ['work', 'Work and everyday reading', /job|work|reading-language\/functional|text-message|email|voicemail|delivery|data-warning|return-policy/],
+    ['work', 'Work and everyday reading', /job|workplace|work-shift|reading-language\/functional|text-message|email|voicemail|delivery|data-warning|return-policy/],
     ['math', 'Numbers and arithmetic', /math-numbers/],
     ['social', 'Communication and feelings', /social-emotional/],
     ['reading', 'Letters and word puzzles', /reading-language/],
@@ -31,13 +31,20 @@
     const text = [title, ...Array.from(card.querySelectorAll('.tag')).map(tag => tag.textContent), ...matches.map(topic => topic[1])].join(' ').toLowerCase();
     const image = card.querySelector('img');
     if (image) image.loading = 'lazy';
-    return { card, title, text, topicIds, index, date: card.dataset.added || '' };
+    const tags = Array.from(card.querySelectorAll('.tag')).map(tag => tag.textContent).join(' ');
+    const level = /level[ -]?3|advanced/i.test(title + ' ' + tags) ? 'advanced' : /level[ -]?2|intermediate|developing|moderate/i.test(title + ' ' + tags) ? 'developing' : /level[ -]?1|beginner|foundational/i.test(title + ' ' + tags) ? 'foundational' : 'unspecified';
+    return { card, title, text, topicIds, level, index, date: card.dataset.added || '' };
   });
 
   const toolbar = document.createElement('div');
   toolbar.className = 'library-toolbar';
   toolbar.innerHTML = '<label for="library-topic">Find a topic<select id="library-topic"><option value="all">All topics</option></select></label><button type="button" class="filter-chip" id="library-reset">Clear filters</button><p id="library-count" role="status" aria-live="polite"></p>';
   const topicSelect = toolbar.querySelector('select');
+  const difficultyLabel = document.createElement('label');
+  difficultyLabel.htmlFor = 'library-level';
+  difficultyLabel.innerHTML = 'Difficulty<select id="library-level"><option value="all">All levels</option><option value="foundational">Foundational / Level 1</option><option value="developing">Developing / Level 2</option><option value="advanced">Advanced / Level 3</option><option value="unspecified">Not specified</option></select>';
+  toolbar.insertBefore(difficultyLabel, toolbar.querySelector('button'));
+  const difficulty = difficultyLabel.querySelector('select');
   topics.forEach(([value, label]) => {
     const count = entries.filter(entry => entry.topicIds.includes(value)).length;
     if (count) topicSelect.add(new Option(label + ' (' + count + ')', value));
@@ -69,6 +76,7 @@
       const categories = (entry.card.dataset.filter || '').split(' ');
       return (category === 'all' || (category === 'guides' ? entry.card.dataset.type === 'guide' : categories.includes(category))) &&
         (topicSelect.value === 'all' || entry.topicIds.includes(topicSelect.value)) &&
+        (difficulty.value === 'all' || entry.level === difficulty.value) &&
         words.every(word => entry.text.includes(word));
     });
     filtered.sort((a, b) => {
@@ -87,10 +95,34 @@
     more.hidden = shown >= filtered.length;
     more.textContent = 'Show more worksheets (' + (filtered.length - shown) + ' remaining)';
     document.querySelectorAll('#page-resources .filter-chip[data-filter]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.filter === category)));
+    if (!restoring && document.getElementById('page-resources').classList.contains('active')) saveState();
   }
+  let restoring = false;
+  function saveState() {
+    const params = new URLSearchParams({page:'resources', category:window.currentFilter || 'all', topic:topicSelect.value, level:difficulty.value, sort:sort.value, q:search.value, limit:String(limit)});
+    history.replaceState(null, '', '#' + params.toString());
+  }
+  const originalShowPage = window.showPage;
+  window.showPage = function(id) {
+    if (id === 'contact' || id === 'about') { location.href = id + '.html'; return false; }
+    const result = originalShowPage(id);
+    if (!restoring) {
+      if (id === 'resources') saveState();
+      else history.pushState(null, '', '#page=' + id);
+    }
+    return result;
+  };
+  window.setFilter = function(el, category) {
+    window.currentFilter = category;
+    topicSelect.value = 'all';
+    difficulty.value = 'all';
+    document.querySelectorAll('.filter-chip[data-filter]').forEach(button => button.classList.toggle('active', button === el));
+    render(true);
+  };
   window.applyFilters = function () { render(true); };
   window.sortResources = function (value) { sort.value = value; render(true); };
   topicSelect.addEventListener('change', () => render(true));
+  difficulty.addEventListener('change', () => render(true));
   more.addEventListener('click', () => {
     const previous = limit;
     limit += 24;
@@ -105,5 +137,58 @@
     window.setFilter(document.querySelector('.filter-chip[data-filter="all"]'), 'all');
     search.focus();
   });
-  render(true);
+  const homeSearch = document.querySelector('.search-bar input');
+  homeSearch.setAttribute('aria-label', 'Search all worksheets');
+  const form = document.createElement('form');
+  homeSearch.parentElement.replaceWith(form);
+  form.className = 'search-bar';
+  form.appendChild(homeSearch);
+  const submit = document.createElement('button');
+  submit.type = 'submit'; submit.textContent = 'Search'; submit.className = 'filter-chip';
+  form.appendChild(submit);
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    window.currentFilter = 'all'; topicSelect.value = 'all'; difficulty.value = 'all';
+    search.value = homeSearch.value;
+    window.searchResources(search.value);
+    window.showPage('resources');
+    render(true); search.focus();
+  });
+  document.querySelectorAll('#page-home .cat-card').forEach((card, index) => {
+    const category = ['life-skills','math','reading','social-emotional','guides',null,'coloring'][index];
+    if (!category) { card.removeAttribute('onclick'); return; }
+    const button = document.createElement('button');
+    button.type = 'button'; button.className = card.className; button.innerHTML = card.innerHTML;
+    const count = entries.filter(entry => category === 'guides' ? entry.card.dataset.type === 'guide' : (entry.card.dataset.filter || '').split(' ').includes(category)).length;
+    button.querySelector('.cat-count').textContent = count + ' resources';
+    button.addEventListener('click', () => {
+      search.value = ''; window.currentSearch = ''; window.clearSearch();
+      window.setFilter(document.querySelector('.filter-chip[data-filter="' + category + '"]'), category);
+      window.showPage('resources');
+    });
+    card.replaceWith(button);
+  });
+  document.querySelectorAll('[onclick*="showPage"]').forEach(link => {
+    if (link.tagName === 'A') link.addEventListener('click', event => event.preventDefault());
+  });
+  function restore() {
+    const params = new URLSearchParams(location.hash.slice(1));
+    restoring = true;
+    const category = params.get('category') || 'all';
+    const chip = document.querySelector('.filter-chip[data-filter="' + (['all','life-skills','math','reading','social-emotional','guides','coloring'].includes(category) ? category : 'all') + '"]');
+    window.setFilter(chip, chip.dataset.filter);
+    for (const [select, key, fallback] of [[topicSelect,'topic','all'],[difficulty,'level','all'],[sort,'sort','newest']]) {
+      select.value = params.get(key) || fallback;
+      if (!select.value) select.value = fallback;
+    }
+    search.value = params.get('q') || ''; window.currentSearch = search.value.toLowerCase().trim();
+    document.getElementById('search-clear').style.display = search.value ? 'flex' : 'none';
+    limit = Math.max(24, Math.min(entries.length, Number(params.get('limit')) || 24));
+    const page = params.get('page') || 'home';
+    originalShowPage(['home','resources','support'].includes(page) ? page : 'home');
+    render(false); restoring = false;
+  }
+  window.addEventListener('hashchange', restore);
+  window.addEventListener('popstate', restore);
+  restore();
 })();
