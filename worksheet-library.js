@@ -45,6 +45,11 @@
   difficultyLabel.innerHTML = 'Difficulty<select id="library-level"><option value="all">All levels</option><option value="foundational">Foundational / Level 1</option><option value="developing">Developing / Level 2</option><option value="advanced">Advanced / Level 3</option><option value="unspecified">Not specified</option></select>';
   toolbar.insertBefore(difficultyLabel, toolbar.querySelector('button'));
   const difficulty = difficultyLabel.querySelector('select');
+  const formatLabel = document.createElement('label');
+  formatLabel.htmlFor = 'library-format';
+  formatLabel.innerHTML = 'Format<select id="library-format"><option value="all">All resources</option><option value="worksheet">Individual worksheets</option><option value="pack">Worksheet packs</option></select>';
+  toolbar.insertBefore(formatLabel, toolbar.querySelector('button'));
+  const format = formatLabel.querySelector('select');
   topics.forEach(([value, label]) => {
     const count = entries.filter(entry => entry.topicIds.includes(value)).length;
     if (count) topicSelect.add(new Option(label + ' (' + count + ')', value));
@@ -59,6 +64,10 @@
   const hint = document.createElement('p');
   hint.className = 'library-hint';
   hint.textContent = 'Choose a category or topic, or search for a skill such as bus, laundry, or counting. Open a worksheet to preview and download it.';
+  const packsLink = document.createElement('a');
+  packsLink.href = 'resources/worksheet-packs.html';
+  packsLink.textContent = 'Browse worksheet packs';
+  hint.append(' ', packsLink);
   // Keep the original HTML as the no-JavaScript catalog; move its cards into one searchable grid.
   main.replaceChildren(hint, toolbar, grid, more);
   const empty = document.getElementById('no-results-msg');
@@ -77,6 +86,7 @@
       return (category === 'all' || (category === 'guides' ? entry.card.dataset.type === 'guide' : categories.includes(category))) &&
         (topicSelect.value === 'all' || entry.topicIds.includes(topicSelect.value)) &&
         (difficulty.value === 'all' || entry.level === difficulty.value) &&
+        (format.value === 'all' || (entry.card.dataset.format || (entry.card.dataset.type === 'guide' ? 'guide' : 'worksheet')) === format.value) &&
         words.every(word => entry.text.includes(word));
     });
     filtered.sort((a, b) => {
@@ -99,7 +109,7 @@
   }
   let restoring = false;
   function saveState() {
-    const params = new URLSearchParams({page:'resources', category:window.currentFilter || 'all', topic:topicSelect.value, level:difficulty.value, sort:sort.value, q:search.value, limit:String(limit)});
+    const params = new URLSearchParams({page:'resources', category:window.currentFilter || 'all', topic:topicSelect.value, level:difficulty.value, format:format.value, sort:sort.value, q:search.value, limit:String(limit)});
     history.replaceState(null, '', '#' + params.toString());
   }
   const originalShowPage = window.showPage;
@@ -123,6 +133,7 @@
   window.sortResources = function (value) { sort.value = value; render(true); };
   topicSelect.addEventListener('change', () => render(true));
   difficulty.addEventListener('change', () => render(true));
+  format.addEventListener('change', () => render(true));
   more.addEventListener('click', () => {
     const previous = limit;
     limit += 24;
@@ -130,6 +141,7 @@
     grid.children[previous]?.focus();
   });
   toolbar.querySelector('#library-reset').addEventListener('click', () => {
+    format.value = 'all';
     topicSelect.value = 'all';
     window.currentSearch = '';
     search.value = '';
@@ -148,6 +160,7 @@
   form.appendChild(submit);
   form.addEventListener('submit', event => {
     event.preventDefault();
+    format.value = 'all';
     window.currentFilter = 'all'; topicSelect.value = 'all'; difficulty.value = 'all';
     search.value = homeSearch.value;
     window.searchResources(search.value);
@@ -177,7 +190,7 @@
     const category = params.get('category') || 'all';
     const chip = document.querySelector('.filter-chip[data-filter="' + (['all','life-skills','math','reading','social-emotional','guides','coloring'].includes(category) ? category : 'all') + '"]');
     window.setFilter(chip, chip.dataset.filter);
-    for (const [select, key, fallback] of [[topicSelect,'topic','all'],[difficulty,'level','all'],[sort,'sort','newest']]) {
+    for (const [select, key, fallback] of [[topicSelect,'topic','all'],[difficulty,'level','all'],[format,'format','all'],[sort,'sort','newest']]) {
       select.value = params.get(key) || fallback;
       if (!select.value) select.value = fallback;
     }
